@@ -423,11 +423,12 @@ footer ul li{
 
 
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-top: 10px;
     /* padding: 10px 20px; */
 }
 
@@ -449,14 +450,14 @@ nav ul{
 
 }
 nav ul li{
-    padding:5px;
+    padding:8px;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    font-size: 7px;
+    font-size: 12px;
 }
 
 .container1{
-    height: 150px;
+    height: 300px;
     display: flex;
     justify-content: space-around ;
     align-items: center;
@@ -471,7 +472,7 @@ nav ul li{
 .container1-content1 h1 {
     font-family: 'Prompt', sans-serif;
     font-weight: 700;
-    font-size: smaller;
+    font-size: 24px;
     font-style: italic;
     line-height: 1.2;
 }
@@ -479,7 +480,7 @@ nav ul li{
 .container1-content1 p{
     font-family: 'inter', san-serif;
     font-weight:400;
-    font-size: 5px;
+    font-size: 12px;
     line-height:1; 
    
 }
@@ -496,8 +497,8 @@ nav ul li{
   
   .rotated-rectangle {
     position: absolute;
-    width: 130px;  /* Set the width of the rectangle */
-    height: 140px; /* Set the height of the rectangle */
+    width: 260px;  /* Set the width of the rectangle */
+    height: 280px; /* Set the height of the rectangle */
     background-color: #EF7C00;
     transform: rotate(-7.25deg);  /* Rotate the rectangle */
     display: flex;
@@ -526,10 +527,10 @@ nav ul li{
   .pan-image img {
     position: absolute;
     z-index: 1;  /* Make sure the pan image is above the background */
-    width: 230px;  /* Set width of the pan image */
+    width: 460px;  /* Set width of the pan image */
     height: auto;  /* Maintain aspect ratio */
-    margin-left: -170px;
-    margin-top: -90px;
+    margin-left: -320px;
+    margin-top: -180px;
 
   }
 
@@ -543,14 +544,14 @@ nav ul li{
   .container2 h1{
     font-family: 'Prompt', sans-serif;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 24px;
     margin-bottom: 2px;
   }
   .container2 p{
     font-family: "Inter", sans-serif;
     font-weight: 400;
     margin-top: 2px;
-    font-size: 5px ;
+    font-size: 10px ;
 
   }
   #container2-span{
@@ -560,15 +561,15 @@ nav ul li{
 
   .container3{
     display: flex;
-    margin: 50px 20px ;
-    justify-content: space-around;
+    margin: 50px 80px ;
+    justify-content: space-evenly;
   }
 
   .container3 p{
     font-family: 'Inter', sans-serif;
     color: #EF7C00;
     font-weight: 400;
-    font-size: 6px;
+    font-size: 12px;
     text-align: center;
   }
 
@@ -584,8 +585,8 @@ nav ul li{
     align-items: center;
     justify-content: center;
     background-color: #E6D5C2;
-    width: 80px;
-    height: 80px;
+    width: 160px;
+    height: 160px;
     border-radius: 120px;
     /* padding: 20px; */
   }
@@ -597,7 +598,7 @@ nav ul li{
 
   .line{
     width: 0px;
-    height:120px;
+    height:210px;
     border-left: 2px dotted #EF7C00;
     ;
     /* padding: 20px; */
@@ -754,29 +755,30 @@ nav ul li{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 50px;
   }
 
   .container5 h1{
-    font-size: 14px;
+    font-size: 32px;
     margin: 2px 0;
   }
 
   .container5 h5{
-    font-size: 5px;
+    font-size: 12px;
     margin: 2px 0;
   }
 
   .container5 p{
-    font-size: 5px;
-    margin: 2px 0;
+    font-size: 12px;
+    margin: 3px 0;
+    text-align: center;
   }
 
   .container5 h7{
     margin: 16px 0;
     font-family: 'Prompt', sans-serif;
     font-weight: 400;
-    font-size: 6px;
+    font-size: 12px;
   }
 
   .container5 button{
@@ -786,9 +788,9 @@ nav ul li{
     padding: 5px 10px;
     font-family: 'Prompt', sans-serif;
     font-weight: 400;
-    font-size: 6px;
+    font-size: 12px;
     color:#EF7C00;
-    margin-top: 5px;
+    margin-top: 15px;
   }
 
  .hline{
@@ -817,7 +819,7 @@ footer .first{
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 6px;
+  font-size: 12px;
 }
 
 footer .second {
@@ -829,13 +831,17 @@ footer .second {
 }
 
 footer ul img{
-  padding: 0 2px;
-  width: 20%;
+  padding: 0 5px;
+  width: 30%;
   height: auto;
 }
 
 footer ul li{
-  padding: 0 2px;
+  padding: 0 10px;
+}
+
+footer ul{
+  display: flex;
 }
 }
 

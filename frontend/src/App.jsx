@@ -111,7 +111,7 @@ function App() {
                <div className='content'>
                  <h1> Press <br/> Series</h1>
                  <p> Elegantly designed and lightweight cookware <br/>  which ensures faster and nutritious cooking <br/> with even heat distribution.</p>
-                 <ul style={{ paddingLeft: '0', marginLeft: '0', listStylePosition: 'inside', fontSize:'6px', marginTop:'50px'}}>
+                 <ul>
                     <li>Available in 3 and 5 layer coating </li>
                     <li>Coating for Uniform Browning </li>
                     <li>Cool Touch  </li>
@@ -121,6 +121,7 @@ function App() {
                </div>
              </div>
           </div>
+
 
           <div className='container5'>
            <h5> DELIVERING A PREMIUM COOKING EXPERIENCE</h5>
