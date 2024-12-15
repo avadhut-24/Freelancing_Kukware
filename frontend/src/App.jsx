@@ -98,7 +98,7 @@ function App() {
                   </ul>
                   <button id='bt' style={{backgroundClip:'white', border:'none', borderRadius:'20px', padding:'5px 10px', fontFamily:'Prompt sans-serif', fontWeight:'400', fontSize:'6px'}}> Know More</button>
                </div>
-               <div className='pan_image' style={{ position:'relative', height:'20vh', width:'20vw', display:'flex'}}>
+               <div className='pan_image' style={{ position:'relative', height:'30vh', width:'20vw', display:'flex'}}>
                   <img src={Rectangle_30} alt='' style={{position:'absolute', height:'auto', width:'180%', transform:'rotate(-7.34deg)', border:'2px solid #FFFFFF80', borderRadius:'10px', top:'20%', left:'-20%', opacity:'0.7'}}/>
                   <img src={image2} alt='' style={{position:'absolute', width:'280%', height:'auto', justifyContent:'center', top:'15%', left:'-80%'}} />
                </div>
