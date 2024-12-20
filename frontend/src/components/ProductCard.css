@@ -1,0 +1,36 @@
+img{
+    height: 50px;
+    width: auto;
+}
+
+.product-card{
+    background-color: white;
+    padding: 2px;
+    border-radius: 7px;
+}
+
+.product-card .product-info{
+    /* display: flex;
+    flex-direction: column; */
+    background-color: #EF7C00;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.product-card h4{
+    margin: 2px 0 0px 0;
+    font-size: 8px;
+    padding: 0 0 2px 5px;
+    font-family: "Prompt", sans-serif;
+    font-weight:600;
+    color: white;
+}
+
+.product-card p{
+   font-family: "Promot", sans-serif;
+   font-size: 6px;
+   /* margin-top: 5px; */
+   padding-top: 5px;
+   padding-left: 5px;
+   color: white ;
+}

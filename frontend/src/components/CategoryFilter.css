@@ -1,0 +1,48 @@
+.category-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px; /* Rounded corners for the filter container */
+    padding: 0 5px;
+    gap: 0px; /* Space between buttons */
+    margin: 0 10px;
+  }
+  
+  .category-filter button {
+    flex: 1;
+    text-align: center;
+    padding: 5px 15px;
+    font-size: 8px;
+    font-weight: bold;
+    color: #ff8000; /* Orange text color */
+    background-color: white;
+    border-right: 1px solid #ff8000;
+    cursor: pointer;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 0px;
+    transition: color 0.3s, background-color 0.3s;
+    margin: 0;
+  }
+  
+  .category-filter button.active {
+    background-color: #ff8000; /* Orange background for active button */
+    color: white; /* White text for active button */
+    cursor: default;
+  }
+  
+  .category-filter button:hover:not(.active) {
+    background-color: rgba(255, 128, 0, 0.1); /* Light orange on hover */
+  }
+  
+  /* .category-filter button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    background: orange;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  } */

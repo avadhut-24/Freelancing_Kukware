@@ -1,0 +1,22 @@
+export const products = [
+    { id: 1, name: "Flat Tawa", category: "Die Cast Series", image: "/assets/productListing/flat-tawa.png" },
+    { id: 2, name: "Fry Pan", category: "Die Cast Series", image: "/assets/productListing/fry-pan.png" },
+    { id: 3, name: "Grill Pan", category: "Die Cast Series", image: "/assets/productListing/grill-pan.png" },
+    { id: 4, name: "Paniyarakkal", category: "Die Cast Series", image: "/assets/productListing/paniyarakkal.png" },
+    { id: 5, name: "Appachetty", category: "Die Cast Series", image: "/assets/productListing/appachetty.png" },
+    { id: 6, name: "Bread Pan", category: "Die Cast Series", image: "/assets/productListing/bread-pan.png" },
+    { id: 7, name: "3 Piece Set", category: "Die Cast Series", image: "/assets/productListing/3-piece-set-diecast.png" },
+    { id: 8, name: "Dosa Flat Tawa", category: "Press Series", image: "/assets/productListing/dosa-flat-tawa.png" },
+    { id: 9, name: "Roti Concave Tawa", category: "Press Series", image: "/assets/productListing/roti-concave-tawa.png" },
+    { id: 10, name: "Fry Pan", category: "Press Series", image: "/assets/productListing/fry-pan.png" },
+    { id: 11, name: "Kadai", category: "Press Series", image: "/assets/productListing/kadai.png" },
+    { id: 12, name: "Appachetty", category: "Press Series", image: "/assets/productListing/appachetty.png" },
+    { id: 13, name: "Biryani Stew Pot", category: "Press Series", image: "/assets/productListing/biryani-stew-pot.png" },
+    { id: 14, name: "Multi Saute Pan", category: "Press Series", image: "/assets/productListing/multi-saute-pan.png" },
+    { id: 15, name: "Sauce Pan", category: "Press Series", image: "/assets/productListing/sauce-pan.png" },
+    { id: 16, name: "Tadka Pan", category: "Press Series", image: "/assets/productListing/tadka-pan.png" },
+    { id: 17, name: "Pathri Tawa Round", category: "Press Series", image: "/assets/productListing/pathri-tawa-round.png" },
+    { id: 18, name: "Pathri Tawa Square", category: "Press Series", image: "/assets/productListing/pathri-tawa-square.png" },
+    { id: 19, name: "3 Piece Set", category: "Press Series", image: "/assets/productListing/3-piece-set-press.png" },
+  ];
+  
