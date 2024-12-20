@@ -16,12 +16,20 @@ import { useState } from 'react';
 import linkedin from '../assets/linkedin.png'
 import facebook from '../assets/facebook.png'
 import insta from '../assets/insta.png'
+import ProductModal from '../components/ProductModal';
+import CarouselData from '../data/CarousalData'
 
 
 const Products = () => {
 
     const [searchQuery, setSearchQuery] = useState("");
     const [activeCategory, setActiveCategory] = useState("All");
+
+    const [showModal, setShowModal] = useState(false);
+    const [selectedProduct, setSelectedProduct] = useState(null);
+    const [selectedCategory, setSelectedCategory] = useState(null);
+
+
   
     const categories = [...new Set(products.map((product) => product.category))];
   
@@ -30,6 +38,18 @@ const Products = () => {
       const matchesCategory = activeCategory === "All" || product.category === activeCategory;
       return matchesSearch && matchesCategory;
     });
+
+    const openModal = (productName, category) => {
+      setSelectedProduct(productName);
+      setShowModal(true);
+      setSelectedCategory(category)
+      console.log("triggered")
+    };
+  
+    const closeModal = () => {
+      setSelectedProduct(null);
+      setShowModal(false); 
+    };
 
   return (
     <div className='MainContainer'>
@@ -151,9 +171,22 @@ const Products = () => {
                         name={product.name}
                         category={product.category}
                         image={product.image}
+                        onClick={() => openModal(product.name, product.category)}
                     />
                     ))}
                 </div>
+                 
+                {selectedProduct && (
+                      <ProductModal
+                        showModal={showModal}
+                        onClose={closeModal}
+                        productName={selectedProduct}
+                        carouselImages={CarouselData[selectedProduct]?.images || []}
+                        tableData={CarouselData[selectedProduct]?.tableData || []}
+                        category={selectedCategory}
+                        
+                      />
+                    )}
            </div>
 
            <div style={{backgroundColor:'#EF7C00'}}>

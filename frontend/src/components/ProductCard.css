@@ -1,12 +1,13 @@
 img{
-    height: 50px;
+    height: 100px;
     width: auto;
 }
 
 .product-card{
     background-color: white;
-    padding: 2px;
+    padding: 10px;
     border-radius: 7px;
+    aspect-ratio: 3 / 4; /* Width : Height = 3:5 */
 }
 
 .product-card .product-info{
@@ -19,7 +20,7 @@ img{
 
 .product-card h4{
     margin: 2px 0 0px 0;
-    font-size: 8px;
+    font-size: 24px;
     padding: 0 0 2px 5px;
     font-family: "Prompt", sans-serif;
     font-weight:600;
@@ -28,7 +29,7 @@ img{
 
 .product-card p{
    font-family: "Promot", sans-serif;
-   font-size: 6px;
+   font-size: 12px;
    /* margin-top: 5px; */
    padding-top: 5px;
    padding-left: 5px;
