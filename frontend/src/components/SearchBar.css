@@ -20,14 +20,14 @@
     border: none;
     outline: none;
     background: none;
-    padding: 5px 10px 5px 10px;
-    font-size: 15px;
+    padding: 10px 10px 10px 10px;
+    font-size: 14px;
     font-family: "Prompt", sans-serif;
   }
 
   .search-bar input::placeholder {
     color: #EF7C00; /* Placeholder text color */
-    font-size: 14px; /* Font size of the placeholder */
+    font-size: 16px; /* Font size of the placeholder */
     opacity: 0.7; /* Transparency */
   }
   

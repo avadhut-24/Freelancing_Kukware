@@ -157,6 +157,9 @@ const Products = () => {
            </div>
 
            <div className="product-listing">
+               <div style={{height:'170px', backgroundColor:'#EF7C00'}}>
+                 
+               </div>
                 <h1>Product Listing</h1>
                 <CategoryFilter
                     categories={categories}

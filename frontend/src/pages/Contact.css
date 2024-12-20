@@ -68,7 +68,7 @@ nav ul li{
     display: flex;
     background-color: #EF7C00;
     height: 360px;
-    border-top-right-radius: 40px;
+    border-top-right-radius: 100px;
     position: relative;
     color: white;
   }
