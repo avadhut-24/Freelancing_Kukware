@@ -205,12 +205,12 @@ const Products = () => {
 
           <div className='hline'> </div>
 
-          <footer  style={{marginBottom:'0px'}}>
+          <footer className='products-footer'  style={{marginBottom:'0px'}}>
             <div className='logo'> <img src={Logo} alt=''/></div>
             <ul className='first'>
-              <li>About</li>
-              <li>Products</li>
-              <li>Home</li>
+             <li > <Link to='/about' style={{textDecoration:'none', color:'inherit'}}>About </Link></li>
+                                  <li><Link to='/products' style={{textDecoration:'none', color:'inherit'}}> Products</Link></li>
+                                   <li><Link to='/' style={{textDecoration:'none', color:'inherit'}}>Home </Link></li>
             </ul>
             <ul>
               <img src={linkedin} alt='' />

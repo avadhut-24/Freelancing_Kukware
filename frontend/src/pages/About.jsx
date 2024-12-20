@@ -91,19 +91,19 @@ const About = () => {
           
                     <div className='about-hline'> </div>
           
-                    <footer>
+                    <foote className='about-footer' >
                       <div className='logo'> <img src={Logo} alt=''/></div>
                       <ul className='first'>
-                        <li>About</li>
-                        <li>Products</li>
-                        <li>Home</li>
+                      <li > <Link to='/about' style={{textDecoration:'none', color:'inherit'}}>About </Link></li>
+                      <li><Link to='/products' style={{textDecoration:'none', color:'inherit'}}> Products</Link></li>
+                      <li><Link to='/' style={{textDecoration:'none', color:'inherit'}}>Home </Link></li>
                       </ul>
                       <ul>
                         <img src={linkedin} alt='' />
                         <img src={facebook} alt='' />
                         <img src={insta} alt='' />
                       </ul>
-                    </footer>
+                    </foote>
          </div>
     </div>
   )

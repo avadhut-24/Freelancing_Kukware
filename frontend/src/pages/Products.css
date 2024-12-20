@@ -309,6 +309,54 @@ nav ul li{
     gap: 25px;
     padding: 40px 10vw;
     margin-bottom: 0px;
-    
+    /* margin: auto;
+   
+     width: 70%; */
 
+}
+
+
+.products-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px 10px 0 10px;
+}
+
+.products-footer .logo img{
+height: auto;
+width: 60%;
+}
+
+.products-footer .first{
+display: flex;
+justify-content: center;
+list-style: none;
+margin: 0;
+padding: 10px;
+font-size: 16px;
+font-family: 'Prompt', sans-serif;
+}
+
+.products-footer .second {
+display: flex;
+justify-content: flex-end;
+list-style: none;
+margin: 0;
+padding-left: 15px;
+}
+
+.products-footer ul img{
+padding: 0 2px;
+width: 30%;
+height: auto;
+}
+
+.products-footer ul li{
+padding: 0 10px;
+color: white;
+font-size: 16px;
+font-family: "Prompt", sans-serif;
+font-weight: 600;
 }
