@@ -21,7 +21,7 @@ header .logo{
   width:20%
 }
 header .logo img{
-  width: 100%;
+  height: 100%;
 }
 
  header nav{
@@ -67,7 +67,7 @@ nav ul li{
   .contact-cont2{
     display: flex;
     background-color: #EF7C00;
-    height: 180px;
+    height: 360px;
     border-top-right-radius: 40px;
     position: relative;
     color: white;
@@ -79,9 +79,9 @@ nav ul li{
   .contact-cont2 .l #first{
      position: absolute;
      transform: rotate(-40deg);
-     height: 120px;
+     height: 200px;
      width: auto;
-     margin-left: -80px;
+     margin-left: -135px;
      margin-top: -20px;
      z-index: 1;
 
@@ -89,9 +89,9 @@ nav ul li{
   .contact-cont2 .l #second{
     position: absolute;
     transform: rotate(-10deg);
-    height: 100px;
+    height: 160px;
     width: auto;
-    margin-left: -75px;
+    margin-left: -85px;
     margin-top: 50px;
     /* z-index: 1; */
  }
@@ -104,22 +104,23 @@ nav ul li{
     justify-content: center;
     flex-direction: column;
     align-items: left;
+    margin-left: 100px;
   }
 
   .contact-cont2 h7{
     font-family: "Promot",sans-serif;
-    font-size: 11px;
+    font-size: 20px;
    ;
   }
 
   .contact-cont2 h1{
     font-family: "Promot",sans-serif;
-    font-size: 14px;
+    font-size: 24px;
   }
 
   .contact-cont2 p{
     font-family: "Promot",sans-serif;
-    font-size: 6px;
+    font-size: 12px;
     padding-left: 10px;
   }
 
@@ -144,9 +145,9 @@ nav ul li{
   /* Labels (Address, Email, etc.) */
   .contact-item .label {
     font-weight: bold;
-    font-size: 8px;
+    font-size: 14px;
     display: inline-block;
-    width: 70px; /* Adjust width for alignment */
+    width: 100px; /* Adjust width for alignment */
   }
   
   /* Values (Text content) */
@@ -154,6 +155,6 @@ nav ul li{
     display: inline-block;
     color: #fff;
     vertical-align: top;
-    font-size: 5px;
+    font-size: 10px;
   }
   
