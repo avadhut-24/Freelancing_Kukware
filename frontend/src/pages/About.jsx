@@ -85,7 +85,7 @@ const About = () => {
                      <p> Have we missed anything? Have any other questions?
                      <br/>
                      Feel free to contact us for further support.</p>
-                     <button> <Link to="/contact" style={{textDecoration:'none'}}>Contact Us</Link></button>
+                     <button> <Link to="/contact" style={{textDecoration:'none', color:'inherit'}}>Contact Us</Link></button>
                      <h7>© 2024 Vardhaman LLC</h7>
                     </div>
           
