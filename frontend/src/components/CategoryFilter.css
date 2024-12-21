@@ -8,6 +8,7 @@
     gap: 2px; /* Space between buttons */
     margin: 0 15vw 50px 15vw;
   }
+
   
   .category-filter button {
     flex: 1;
@@ -20,13 +21,16 @@
     /* border-right: 1px solid #ff8000; */
     border:none;
     cursor: pointer;
-    /* border-left: none;
-    border-top: none;
-    border-bottom: none; */
     border-radius: 0px;
     transition: color 0.3s, background-color 0.3s;
     margin: 0;
     position: relative;
+  }
+
+  .category-filter button.active {
+    
+    color: #EF7C00; /* Change text color */
+    font-weight: 800; /* Optional: Make the text bold */
   }
 
     .category-filter button:not(:last-child)::after {

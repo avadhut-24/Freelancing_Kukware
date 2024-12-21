@@ -4,19 +4,23 @@ import './CategoryFilter.css'
 function CategoryFilter({ categories, activeCategory, setActiveCategory }) {
   return (
     <div className="category-filter">
-      <button onClick={() => setActiveCategory("All")}>
-        All
+    <button
+      onClick={() => setActiveCategory("All")}
+      className={activeCategory === "All" ? "active" : ""}
+    >
+      All
+    </button>
+    {categories.map((category) => (
+      <button
+        key={category}
+        className={activeCategory === category ? "active" : ""}
+        onClick={() => setActiveCategory(category)}
+      >
+        {category}
       </button>
-      {categories.map((category) => (
-        <button
-          key={category}
-          className={activeCategory === category ? "active" : ""}
-          onClick={() => setActiveCategory(category)}
-        >
-          {category}
-        </button>
-      ))}
-    </div>
+    ))}
+  </div>
+  
   );
 }
 
