@@ -36,10 +36,10 @@
     .category-filter button:not(:last-child)::after {
       content: "";
       position: absolute;
-      right: -5px; /* Adjusts the line's position */
+      right: -1px; /* Adjusts the line's position */
       top: 0; /* Aligns the line with the top of the button */
       height: 100%; /* Matches the height of the button */
-      width: 5px; /* Thickness of the vertical line */
+      width: 3px; /* Thickness of the vertical line */
       background-color: orange; /* Line color */
     }
   
