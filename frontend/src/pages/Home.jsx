@@ -219,7 +219,29 @@ function Home() {
                   <img className='second' src={image2} alt='' />
                </div>
              </div>)}
-             <div className='cont4-sub-cont2'>
+
+
+             {isMobile ? (<div className='cont4-sub-cont2'>
+               
+               <div className='content'>
+                <h1> Press Series</h1>
+                <p> Elegantly designed and lightweight cookware <br/>  which ensures faster and nutritious cooking <br/> with even heat distribution.</p>
+               </div>
+               <div className='imgdiv'>
+                 <img className='first' src={Rectangle_30} alt=''/>
+                 <img className='second' src ={image3} alt=''/>
+                 <img className='third' src ={image4} alt='' />
+               </div>
+               <div style={{textAlign:'right'}}>
+               <ul>
+                <li>Available in 3 and 5 layer coating </li>
+                <li>Coating for Uniform Browning </li>
+                <li>Cool Touch  </li>
+                <li>Bakelite Handle </li> 
+                </ul>
+                <button> Know More</button>
+                </div>
+             </div>): (<div className='cont4-sub-cont2'>
                <div>
                  <img className='first' src={Rectangle_30} alt=''/>
                  <img className='second' src ={image3} alt=''/>
@@ -236,11 +258,39 @@ function Home() {
                 </ul>
                 <button> Know More</button>
                </div>
-             </div>
+             </div>)}
           </div>
 
 
-          <div className='container5'>
+         { isMobile ? (<div style={{backgroundColor:'#EF7C00'}}>
+          <div className='hline'> </div>
+        <div className='container5'>
+           <h5> DELIVERING A PREMIUM <br/>COOKING EXPERIENCE</h5>
+           
+           <p>Have any other questions?
+           <br/>
+           Feel free to contact us for further support.</p>
+           <button> <Link to="/contact" style={{textDecoration:'none', color:'inherit'}}>Contact Us</Link></button>
+           
+          </div>
+
+          <div className='hline'> </div>
+
+          <footer className='home-footer'>
+           
+            <ul className='first'>
+              <li><Link to='/about' style={{textDecoration:'none', color:'inherit'}}>About </Link></li>
+              <li><Link to='/products' style={{textDecoration:'none', color:'inherit', cursor:'pointer'}}> Products</Link></li>
+              <li><Link to='/' style={{textDecoration:'none', color:'inherit', cursor:'pointer'}}>Home </Link></li>
+            </ul>
+            <ul className='second'>
+              <img style={{cursor:'pointer'}} src={linkedin} alt='' />
+              <img style={{cursor:'pointer'}} src={facebook} alt='' />
+              <img style={{cursor:'pointer'}} src={insta} alt='' />
+            </ul>
+          </footer>
+        </div>):(<div>
+        <div className='container5'>
            <h5> DELIVERING A PREMIUM COOKING EXPERIENCE</h5>
            <h1> Request More Information</h1>
            <p> Have we missed anything? Have any other questions?
@@ -265,6 +315,8 @@ function Home() {
               <img style={{cursor:'pointer'}} src={insta} alt='' />
             </ul>
           </footer>
+        </div>)}
+          
       </div>
    
   )

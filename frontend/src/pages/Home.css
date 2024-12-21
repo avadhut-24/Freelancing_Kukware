@@ -347,54 +347,61 @@
   .cont4-sub-cont2{
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    /* align-items: center; */
     width: 100%;
     height: auto;
-    margin-top: 150px;
+    margin-top: 30px;
+  }
+
+  .imgdiv{
+    width: 100%;
+    height: auto;
+    position: relative;
   }
 
   .cont4-sub-cont2 .first{
-    position: absolute;
-    width: 36%;
-    height: auto;
-    transform: rotate(-7.34deg);
+    width: 70vw;
+    height: 70vw;
+    transform: rotate(7.34deg);
     border: 2px solid #FFFFFF80;
     border-radius: 10px ;
-    top:14%;
+    margin-top: 40px;
     left:8%;
     opacity: 0.7;
   }
 
   .cont4-sub-cont2 .second{
     position: absolute;
-    width: 65%;
+    width: 100%;
     height: auto;
     transform: rotate(3.4deg);
-    top:-5%;
+    
     left:0%;
   }
 
   .cont4-sub-cont2 .third{
     position: absolute;
-    width: 32%;
+    width: 50%;
     height: auto;
     transform: rotate(18deg);
-    top:47%;
-    left:13%;
+    top:44%;
+    left:20%;
   }
 
   
 
   .cont4-sub-cont2 .content{
-    margin-right: -30px;
-    margin-bottom: 100px;
+    margin-right: 20px;
+    /* margin-bottom: 100px; */
     margin-top: 10px;
     text-align: right;
     color:white;
   }
 
   .cont4-sub-cont2 .content h1{
-    font-size: 24px;
+    font-size: 22px;
     font-family: 'Prompt', sans-serif;
   }
 
@@ -403,25 +410,30 @@
     font-family: 'Prompt', sans-serif;
   }
 
-  .cont4-sub-cont2 .content ul{
+  .cont4-sub-cont2 ul{
     list-style-position: inside;
     font-size: 12px;
     padding-left: 0;
-    margin-left: 0;
-    margin-top: 50px;
+    margin-right: 20px;
+    margin-top: 60px;
     font-family: 'Prompt', sans-serif;
+    color: white;
+    text-align: right;
   }
 
-  .cont4-sub-cont2 .content button {
+  .cont4-sub-cont2 button {
     background-color: white;
+    /* width: 30%; */
     border: none;
     border-radius: 20px;
-    padding: 10px 20px;
+    padding: 10px 60px;
     font-family: 'Prompt', sans-serif;
     font-weight: 700;
     font-size: 12px;
     color: #EF7C00;
+    margin-bottom: 60px;
     margin-top: 20px;
+    margin-right: 20px;
     cursor: pointer; /* Adds a pointer cursor for better UX */
     transition: all 0.3s ease; /* Smooth transition for hover effects */
   }
@@ -432,6 +444,105 @@
     transform: scale(1.05); /* Slightly increase button size */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
   }
+
+  .container5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+ 
+
+  .container5 h5{
+    font-size: 12px;
+    margin: 2px 0;
+    color: white;
+    letter-spacing: 1.5px;
+    font-family: 'Prompt', sans-serif;
+  }
+
+  .container5 p{
+    font-size: 12px;
+    margin: 10px 0 10px 0;
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+    color: white;
+  }
+
+
+
+  .container5 button{
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 50px;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color:#EF7C00;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  .container5 button:hover {
+    transform: scale(1.05); /* Slightly increase button size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  }
+
+ .hline{
+    display: flex;
+    border: 2px solid #FFFFFF40;
+    opacity: 0.5;
+    width: 90%;
+    margin:auto;
+  }
+
+.home-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px 10px 0 10px;
+}
+
+
+
+.home-footer .first{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'Prompt', sans-serif;
+  font-weight: 700;
+}
+
+.home-footer .second {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 10px 0;
+  padding-left: 0px;
+  cursor: pointer;
+}
+
+.home-footer ul img{
+  padding: 0 5px;
+  width: 30%;
+  height: auto;
+}
+
+.home-footer ul li{
+  padding: 0 10px;
+ 
+}
+
+.home-footer ul{
+  display: flex;
+}
   
 
 }
