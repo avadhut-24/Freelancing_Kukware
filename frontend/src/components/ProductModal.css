@@ -60,8 +60,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 95%; 
-    width: 100%;  /* Ensures carousel spans full width of container */
+    height: 90%; 
+    width: 90%;  /* Ensures carousel spans full width of container */
     overflow: hidden;  /* Prevents overflow */
   }
   
@@ -70,6 +70,8 @@
   .modal-details {
     flex: 1;
     padding: 20px;
+    height: 90%; 
+    width: 90%;
     text-align: left;
     display: flex;
     flex-direction: column;
