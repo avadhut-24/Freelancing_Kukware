@@ -17,7 +17,7 @@ const ProductModal = ({
     return (
         
         <div className="modal-overlay">
-        {console.log('check')}
+        {console.log(category)}
         <div className="modal-content">
           <button className="modal-close" onClick={onClose}>
             ×
@@ -32,7 +32,7 @@ const ProductModal = ({
                 showThumbs={false} // Hides thumbnails
               >
                 {carouselImages?.map((image, index) => (
-                  <div key={index}>
+                  <div style={{padding:'10px', height:'100%', width:"100%", display:'flex', flexDirection:'column', justifyContent:'center'}} key={index}>
                     <img  style={{objectFit:'contain'}} src={image} alt={`Slide ${index + 1}`} />
                   </div>
                 ))}
@@ -41,8 +41,11 @@ const ProductModal = ({
       
             {/* Right Content */}
             <div className="modal-details">
-              <h4 className="modal-category">{category}</h4>
-              <h2 className="modal-title">{productName}</h2>
+            <div>
+            <h4 className="modal-category">{category}</h4>
+            <h2 className="modal-title">{productName}</h2>
+            </div>
+              
               <table className="modal-table">
                 <thead>
                   <tr>

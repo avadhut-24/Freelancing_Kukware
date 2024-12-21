@@ -448,6 +448,7 @@ nav ul li{
 .home-footer .logo img{
   height: auto;
   width: 60%;
+  cursor: pointer;
 }
 
 .home-footer .first{
@@ -467,6 +468,7 @@ nav ul li{
   list-style: none;
   margin: 0;
   padding-left: 15px;
+  cursor: pointer;
 }
 
 .home-footer ul img{

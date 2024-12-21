@@ -4,7 +4,7 @@
     width: 70vw;
     /* max-width: 600px; */
     margin: 0 auto; /* Center the search bar */
-    padding: 2px 0px;
+    padding: 3px 0px;
     border-radius: 30px;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -12,6 +12,7 @@
     align-items: center;
     border: 1px solid #f0f0f0;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   /* Styling for the input field */
@@ -21,13 +22,13 @@
     outline: none;
     background: none;
     padding: 10px 10px 10px 10px;
-    font-size: 14px;
+    font-size: 18px;
     font-family: "Prompt", sans-serif;
   }
 
   .search-bar input::placeholder {
     color: #EF7C00; /* Placeholder text color */
-    font-size: 16px; /* Font size of the placeholder */
+    font-size: 18px; /* Font size of the placeholder */
     opacity: 0.7; /* Transparency */
   }
   
@@ -43,4 +44,55 @@
   .search-bar .search-icon img{
     height: 16px;
     padding-left: 10px;
+  }
+
+  @media (min-width:1300px){
+
+    .search-bar {
+      position: relative;
+      width: 70vw;
+      /* max-width: 600px; */
+      margin: 0 auto; /* Center the search bar */
+      padding: 7px 0px;
+      border-radius: 30px;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      border: 1px solid #f0f0f0;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    
+    /* Styling for the input field */
+    .search-bar input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: none;
+      padding: 10px 10px 10px 10px;
+      font-size: 24px;
+      font-family: "Prompt", sans-serif;
+    }
+  
+    .search-bar input::placeholder {
+      color: #EF7C00; /* Placeholder text color */
+      font-size: 20px; /* Font size of the placeholder */
+      opacity: 0.7; /* Transparency */
+    }
+    
+    /* Styling for the search icon */
+    .search-bar .search-icon {
+      color: #EF7C00;
+      font-size: 24px;
+      margin-left: 10px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .search-bar .search-icon img{
+      height: 24px;
+      padding-left: 10px;
+    }
+
   }

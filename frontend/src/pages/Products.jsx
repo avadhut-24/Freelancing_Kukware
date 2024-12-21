@@ -43,6 +43,7 @@ const Products = () => {
       setSelectedProduct(productName);
       setShowModal(true);
       setSelectedCategory(category)
+      console.log(category)
       console.log("triggered")
     };
   
@@ -193,7 +194,7 @@ const Products = () => {
            </div>
 
            <div style={{backgroundColor:'#EF7C00'}}>
-           <div className='container5'>
+           <div className='products-container5'>
            <h5 style={{marginTop:'20px'}}> DELIVERING A PREMIUM COOKING EXPERIENCE</h5>
            <h1> Request More Information</h1>
            <p> Have we missed anything? Have any other questions?
@@ -213,9 +214,9 @@ const Products = () => {
                                    <li><Link to='/' style={{textDecoration:'none', color:'inherit'}}>Home </Link></li>
             </ul>
             <ul>
-              <img src={linkedin} alt='' />
-              <img src={facebook} alt='' />
-              <img src={insta} alt='' />
+              <img style={{cursor:'pointer'}} src={linkedin} alt='' />
+              <img style={{cursor:'pointer'}} src={facebook} alt='' />
+               <img style={{cursor:'pointer'}} src={insta} alt='' />
             </ul>
           </footer>
            </div>

@@ -92,16 +92,16 @@ const About = () => {
                     <div className='about-hline'> </div>
           
                     <foote className='about-footer' >
-                      <div className='logo'> <img src={Logo} alt=''/></div>
+                      <div className='logo'> <img style={{cursor:'pointer'}} src={Logo} alt=''/></div>
                       <ul className='first'>
                       <li > <Link to='/about' style={{textDecoration:'none', color:'inherit'}}>About </Link></li>
                       <li><Link to='/products' style={{textDecoration:'none', color:'inherit'}}> Products</Link></li>
                       <li><Link to='/' style={{textDecoration:'none', color:'inherit'}}>Home </Link></li>
                       </ul>
                       <ul>
-                        <img src={linkedin} alt='' />
-                        <img src={facebook} alt='' />
-                        <img src={insta} alt='' />
+                         <img style={{cursor:'pointer'}} src={linkedin} alt='' />
+                         <img style={{cursor:'pointer'}} src={facebook} alt='' />
+                         <img style={{cursor:'pointer'}} src={insta} alt='' />
                       </ul>
                     </foote>
          </div>
