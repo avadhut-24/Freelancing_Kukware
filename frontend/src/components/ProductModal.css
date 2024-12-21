@@ -47,6 +47,7 @@
     flex-direction: row;
     height: 100%;
     width:100%;
+    padding: 20px;
 
   }
 
@@ -54,7 +55,7 @@
   /* Left Carousel */
   .modal-carousel {
     flex: 1.5;
-    border-right: 1px solid #ddd;
+    /* border-right: 1px solid #ddd; */
     display: flex;
     justify-content: center;
     align-items: center;

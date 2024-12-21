@@ -26,7 +26,7 @@ const ProductModal = ({
             {/* Left Carousel */}
             <div className="modal-carousel">
               <Carousel 
-                showArrows={true} 
+                showArrows={false} 
                 autoPlay={true} 
                 infiniteLoop={true} 
                 showThumbs={false} // Hides thumbnails
