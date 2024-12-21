@@ -6,6 +6,7 @@ import linkedin from '../assets/linkedin.png'
 import facebook from '../assets/facebook.png'
 import insta from '../assets/insta.png'
 import image from '../assets/image4.png'
+import { NavLink } from 'react-router-dom';
 
 const Contact = () => {
   return (
@@ -16,10 +17,10 @@ const Contact = () => {
             </div>
             <nav className="nav-bar">
               <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About Us</Link></li>
-                <li><Link to="/products">Products</Link></li>
-                <li><Link to="/contact">Contact Us</Link></li>
+              <li><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
+              <li><NavLink to="/about" activeClassName="active">About Us</NavLink></li>
+              <li><NavLink to="/products" activeClassName="active">Products</NavLink></li>
+              <li><NavLink to="/contact" activeClassName="active">Contact Us</NavLink></li>
               </ul>
             </nav>
      </header>

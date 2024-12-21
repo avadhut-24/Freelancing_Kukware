@@ -18,6 +18,7 @@ import facebook from '../assets/facebook.png'
 import insta from '../assets/insta.png'
 import ProductModal from '../components/ProductModal';
 import CarouselData from '../data/CarousalData'
+import { NavLink } from 'react-router-dom';
 
 
 const Products = () => {
@@ -60,10 +61,10 @@ const Products = () => {
             </div>
             <nav className="nav-bar">
               <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About Us</Link></li>
-                <li><Link to="/products">Products</Link></li>
-                <li><Link to="/contact">Contact Us</Link></li>
+              <li><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
+              <li><NavLink to="/about" activeClassName="active">About Us</NavLink></li>
+              <li><NavLink to="/products" activeClassName="active">Products</NavLink></li>
+              <li><NavLink to="/contact" activeClassName="active">Contact Us</NavLink></li>
               </ul>
             </nav>
           </header>
@@ -185,8 +186,8 @@ const Products = () => {
                         showModal={showModal}
                         onClose={closeModal}
                         productName={selectedProduct}
-                        carouselImages={CarouselData[selectedProduct]?.images || []}
-                        tableData={CarouselData[selectedProduct]?.tableData || []}
+                        carouselImages={CarouselData[selectedCategory][selectedProduct]?.images || []}
+                        tableData={CarouselData[selectedCategory][selectedProduct]?.tableData || []}
                         category={selectedCategory}
                         
                       />

@@ -9,59 +9,18 @@
     overflow-y: hidden;
 }
 
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 10px;
-    /* padding: 10px 20px; */
-}
-
-header .logo{
-  width:20%
-}
-header .logo img{
-  height: 100%;
-}
-
- header nav{
-    width: 55%;
-}
-
-nav ul{
-    display: flex;  
-    list-style: none;
-    padding: 0;
-
-}
-nav ul li{
-    padding:8px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    z-index: 10;
-}
-
-.nav-bar ul li a {
-    text-decoration: none; /* Removes the underline */
-    color: inherit; /* Ensures the link inherits the parent text color */
-  }
-  
-  .nav-bar ul li a:hover {
-    color: #EF7C00; /* Optional: Add underline on hover for better UX */
-  }
   .contact-cont1{
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin: 80px 50px 50px -300px;
   }
 
   .contact-cont1 h1{
     text-align: left;
     font-family: "Promot",sans-serif;
-    font-size: 24px;
+    font-size: 35px;
     font-style: italic;
-    font-weight: 700;
+    font-weight: 800;
   }
 
   .contact-cont2{
@@ -79,19 +38,19 @@ nav ul li{
   .contact-cont2 .l #first{
      position: absolute;
      transform: rotate(-40deg);
-     height: 200px;
+     height: 300px;
      width: auto;
-     margin-left: -135px;
-     margin-top: -20px;
+     margin-left: -220px;
+     margin-top: -80px;
      z-index: 1;
 
   }
   .contact-cont2 .l #second{
     position: absolute;
-    transform: rotate(-10deg);
-    height: 160px;
+    transform: rotate(-5deg);
+    height: 200px;
     width: auto;
-    margin-left: -85px;
+    margin-left: -135px;
     margin-top: 50px;
     /* z-index: 1; */
  }
@@ -104,23 +63,24 @@ nav ul li{
     justify-content: center;
     flex-direction: column;
     align-items: left;
-    margin-left: 100px;
+    margin-left: 150px;
   }
 
   .contact-cont2 h7{
     font-family: "Promot",sans-serif;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: 500
    ;
   }
 
   .contact-cont2 h1{
     font-family: "Promot",sans-serif;
-    font-size: 24px;
+    font-size: 34px;
   }
 
   .contact-cont2 p{
     font-family: "Promot",sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     padding-left: 10px;
   }
 
@@ -139,13 +99,13 @@ nav ul li{
   .contact-item {
     margin-bottom: 10px;
     display: flex;
-    align-items: center;
+    align-items: top;
   }
   
   /* Labels (Address, Email, etc.) */
   .contact-item .label {
-    font-weight: bold;
-    font-size: 14px;
+    font-weight: 700;
+    font-size: 16px;
     display: inline-block;
     width: 100px; /* Adjust width for alignment */
   }
@@ -155,6 +115,7 @@ nav ul li{
     display: inline-block;
     color: #fff;
     vertical-align: top;
-    font-size: 10px;
+    font-size: 12px;
+    
   }
   

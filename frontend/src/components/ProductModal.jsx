@@ -44,9 +44,15 @@ const ProductModal = ({
             <div>
             <h4 className="modal-category">{category}</h4>
             <h2 className="modal-title">{productName}</h2>
+            {productName === "3 Piece Set" && category === "Press Series" && (
+              <h4>Includes: Kadai, Fry Pan, and Flat Tawa</h4>
+            )}
+            {productName === "3 Piece Set" && category === "Die Cast Series" && (
+              <h4>includes: Grill Pan, Fry Pan and Flat Tawa</h4>
+            )}
             </div>
-              
-              <table className="modal-table">
+              { tableData.length > 0 && (
+                <table className="modal-table">
                 <thead>
                   <tr>
                     <th>Product Code</th>
@@ -61,7 +67,9 @@ const ProductModal = ({
                     </tr>
                   ))}
                 </tbody>
-              </table>
+              </table>)
+              }
+              
             </div>
           </div>
         </div>

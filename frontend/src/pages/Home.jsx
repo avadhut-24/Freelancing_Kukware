@@ -14,6 +14,7 @@ import linkedin from '../assets/linkedin.png'
 import facebook from '../assets/facebook.png'
 import insta from '../assets/insta.png'
 import {Link} from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -24,19 +25,19 @@ function Home() {
   return (
     
       <div className="MainContainer">
-          <header className="header">
-            <div className="logo">
-             <img src={Logo} alt='My Logo' />
-            </div>
-            <nav className="nav-bar">
-              <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About Us</Link></li>
-                <li><Link to="/products">Products</Link></li>
-                <li><Link to="/contact">Contact Us</Link></li>
-              </ul>
-            </nav>
-          </header>
+         <header className="header">
+  <div className="logo">
+    <img src={Logo} alt="My Logo" />
+  </div>
+  <nav className="nav-bar">
+    <ul>
+      <li><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
+      <li><NavLink to="/about" activeClassName="active">About Us</NavLink></li>
+      <li><NavLink to="/products" activeClassName="active">Products</NavLink></li>
+      <li><NavLink to="/contact" activeClassName="active">Contact Us</NavLink></li>
+    </ul>
+  </nav>
+</header>
 
           <div className='container1'>
            <div className='container1-content1'>
