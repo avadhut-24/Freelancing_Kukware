@@ -8,122 +8,436 @@
     overflow-y: auto;
 }
 
-.container5{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
+@media (max-width:750px){
+
+  .mobile-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    /* background-color: #ffffff; */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    position: relative;
+    z-index: 1000;
+    margin-top: 10px auto;
+ 
+  }
+  
+  /* Logo Section */
+  .logo {
+    display: flex;
+    align-items: center;
+    width: 30%;
+  }
+  
+  /* Hamburger Menu Icon */
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  .menu-icon .line {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    position: absolute;
+    text-align: right;
+    width: 150px;
+    height: 300px;
+    padding: 20px 0 20px 20px;
+    right: 0;
+    top: 0;
+    border-top-left-radius: 40px;
+    overflow: hidden; /* Ensures the background stays within bounds */
+    display: flex;
+    flex-direction: column;
+    background-color: #EF7C00;
+    z-index: 1000;
+  }
+  
+  .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/Rectangle-30.png');
+    background-size: cover;
+    opacity: 0.3; 
+    z-index: -1; 
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  /* Highlight active link */
+  .nav-link.active {
+    color: black; /* Change to desired color */
+    font-weight: bold;
+  }
+  
+  .nav-link.active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 15px;
+    width: 2px;
+    height: 100%;
+    background-color: #000; /* Same color as text for vertical line */
+  }
+
+  .container1{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around ;
+    align-items: center;
 }
 
-.container5 h1{
-  font-size: 46px;
-  margin: 2px 0;
-  font-family: 'Prompt', sans-serif;
+.container1-content1{
+   margin: auto;
+   margin-top: 30px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+    
+}
+.container1-content1 h1 {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 2px;
+    /* font-style: italic; */
+    line-height: 1.2;
 }
 
-.container5 h5{
-  font-size: 18px;
-  margin: 2px 0;
-  font-family: 'Prompt', sans-serif;
-  color: #3D3D3D;
-  opacity: 60%;
-}
-
-.container5 p{
-  font-size: 18px;
-  margin: 3px 0;
-  text-align: center;
-  font-family: 'Prompt', sans-serif;
-}
-
-.container5 h7{
-  margin: 16px 0;
-  font-family: 'Prompt', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-}
-
-.container5 button{
-  background-color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
-  font-family: 'Prompt', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  color:#EF7C00;
-  margin-top: 15px;
-}
-.container5 button:hover {
-  transform: scale(1.05); /* Slightly increase button size */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
-}
-
-.hline{
-  display: flex;
-  border: 2px solid #00000040;
-  opacity: 0.5;
-  width: 90%;
-  margin:auto;
-}
-
-.home-footer{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 10px 10px;
-}
-
-.home-footer .logo img{
-height: auto;
-width: 70%;
-}
-
-.home-footer .first{
-display: flex;
-justify-content: center;
-list-style: none;
-margin: 0;
-padding: 0;
-font-size: 16px;
-font-family: 'Prompt', sans-serif;
-color: black;
-}
-
-.home-footer .second {
-display: flex;
-justify-content: flex-end;
-list-style: none;
-margin: 0;
-padding-left: 15px;
-}
-
-.home-footer ul img{
-padding: 0 10px;
-width: 70%;
-height: auto;
-}
-
-.home-footer ul{
-padding-left: 0px;
-}
-
-.home-footer ul li{
-padding: 0 10px;
-color:black;
-font-family: "Prompt",sans-serif;
-font-weight: 700;
-font-size: 16px;
-
-}   
-
-.home-footer ul{
-display: flex;
+.container1-content1 p{
+    font-family: 'Inter', san-serif;
+    font-weight:400;
+    font-size: 12px;
+    line-height:1; 
+    text-align: center;
+    margin-top: 2px;
+   
 }
 
 
-@media (max-width: 1270px) {
+.rotated-rectangle-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh;  */
+    /* width: 100%;    Full width */
+  }
+  
+  .rotated-rectangle {
+    position: relative;
+    width: 240px;  /* Set the width of the rectangle */
+    height: 240px; /* Set the height of the rectangle */
+    background-color: #EF7C00;
+    transform: rotate(0deg);  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 10%;
+    /* margin-left: -80px; */
+    
+  }
+  
+  .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/Rectangle-30.png'); /* Background image URL */
+  background-size: cover; /* Make the background cover the entire container */
+  background-position: center; /* Center the background image */
+  opacity: 0.5; /* Set the opacity to make the image semi-transparent */
+  
+  }
+  
+  .pan-image img {
+    position: absolute;
+    z-index: 1;  /* Make sure the pan image is above the background */
+    width: 460px;  /* Set width of the pan image */
+    height: auto;  /* Maintain aspect ratio */
+    margin-left: -250px;
+    margin-top: -330px;
+    transform: rotate(7.34deg);
+  }
+
+  .container2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .container2 h1{
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 2px;
+  }
+  .container2 p{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    margin-top: 2px;
+    font-size: 12px ;
+
+  }
+  #container2-span{
+    font-style: italic;
+    color: #EF7C00;
+  }
+
+  .container3{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0px;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .container3 p{
+    font-family: 'Inter', sans-serif;
+    color: #EF7C00;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .circleWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E6D5C2;
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+    /* padding: 20px; */
+  }
+  
+  .circle img{
+    width: 50%;
+    height: 50%;
+  }
+
+  .container4{
+    background-color: #EF7C00;
+    border-top-right-radius: 70px;
+  }
+  
+  .cont4-sub-cont1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    margin-left: 20px;
+ 
+  }
+
+  .cont4-sub-cont1 .left{
+    color: white;
+    margin-top: 10px;
+  }
+
+  .cont4-sub-cont1 p{
+     font-size: 10px;
+     font-family: 'Prompt', sans-serif;
+     line-height: 1;
+  }
+
+  .cont4-sub-cont1 h1{
+     font-size: 22px;
+     font-family: 'Prompt', sans-serif;
+     line-height: 1;
+  }
+
+  .cont4-sub-cont1 ul{
+    font-size: 12px;
+    font-weight: 500;
+    padding: 13px;
+    line-height: 1.2;
+    font-family: 'Prompt', sans-serif;
+  }
+
+  .cont4-sub-cont1 button{
+    background-color: white;
+    color:#EF7C00;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 60px;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    font-family: 'Prompt', sans-serif;
+    cursor: pointer; /* Adds a pointer cursor for better UX */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+
+  .cont4-sub-cont1 button:hover {
+    background-color: #EF7C00; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly increase button size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  }
+
+
+
+  .cont4-sub-cont1 .pan_image{
+    position: relative;
+    display: flex;
+    height: 80vw;
+  }
+
+  .cont4-sub-cont1 .pan_image .first{
+    position: absolute;
+    height: auto;
+    width: 70vw;
+    height: 65vw;
+    transform: rotate(-7.34deg);
+    border: 2px solid #FFFFFF80;
+    border-radius: 20px;
+    top: 10%;
+    left: 10%;
+    opacity: 0.7;
+  }
+
+  .cont4-sub-cont1 .pan_image .second {
+    position: absolute;
+    height: auto;
+    width: 105%;
+    justify-content: center;
+    transform: rotate(-7.34deg);
+    top: 10%;
+    left: -10%;
+  }
+
+  .cont4-sub-cont2{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    margin-top: 150px;
+  }
+
+  .cont4-sub-cont2 .first{
+    position: absolute;
+    width: 36%;
+    height: auto;
+    transform: rotate(-7.34deg);
+    border: 2px solid #FFFFFF80;
+    border-radius: 10px ;
+    top:14%;
+    left:8%;
+    opacity: 0.7;
+  }
+
+  .cont4-sub-cont2 .second{
+    position: absolute;
+    width: 65%;
+    height: auto;
+    transform: rotate(3.4deg);
+    top:-5%;
+    left:0%;
+  }
+
+  .cont4-sub-cont2 .third{
+    position: absolute;
+    width: 32%;
+    height: auto;
+    transform: rotate(18deg);
+    top:47%;
+    left:13%;
+  }
+
+  
+
+  .cont4-sub-cont2 .content{
+    margin-right: -30px;
+    margin-bottom: 100px;
+    margin-top: 10px;
+    text-align: right;
+    color:white;
+  }
+
+  .cont4-sub-cont2 .content h1{
+    font-size: 24px;
+    font-family: 'Prompt', sans-serif;
+  }
+
+  .cont4-sub-cont2 .content p{
+    font-size: 12px;
+    font-family: 'Prompt', sans-serif;
+  }
+
+  .cont4-sub-cont2 .content ul{
+    list-style-position: inside;
+    font-size: 12px;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 50px;
+    font-family: 'Prompt', sans-serif;
+  }
+
+  .cont4-sub-cont2 .content button {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #EF7C00;
+    margin-top: 20px;
+    cursor: pointer; /* Adds a pointer cursor for better UX */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .cont4-sub-cont2 .content button:hover {
+    background-color: #EF7C00; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly increase button size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  }
+  
+
+}
+
+
+@media (max-width: 1270px) and (min-width:750px) {
 .header{
     display: flex;
     align-items: center;
@@ -973,7 +1287,123 @@ nav ul li{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
   }
 
+  .container5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
+  
+  .container5 h1{
+    font-size: 46px;
+    margin: 2px 0;
+    font-family: 'Prompt', sans-serif;
+  }
+  
+  .container5 h5{
+    font-size: 18px;
+    margin: 2px 0;
+    font-family: 'Prompt', sans-serif;
+    color: #3D3D3D;
+    opacity: 60%;
+  }
+  
+  .container5 p{
+    font-size: 18px;
+    margin: 3px 0;
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+  }
+  
+  .container5 h7{
+    margin: 16px 0;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  
+  .container5 button{
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color:#EF7C00;
+    margin-top: 15px;
+  }
+  .container5 button:hover {
+    transform: scale(1.05); /* Slightly increase button size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  }
+  
+  .hline{
+    display: flex;
+    border: 2px solid #00000040;
+    opacity: 0.5;
+    width: 90%;
+    margin:auto;
+  }
+  
+  .home-footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px 10px;
+  }
+  
+  .home-footer .logo img{
+  height: auto;
+  width: 70%;
+  }
+  
+  .home-footer .first{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Prompt', sans-serif;
+  color: black;
+  }
+  
+  .home-footer .second {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding-left: 15px;
+  }
+  
+  .home-footer ul img{
+  padding: 0 10px;
+  width: 70%;
+  height: auto;
+  }
+  
+  .home-footer ul{
+  padding-left: 0px;
+  }
+  
+  .home-footer ul li{
+  padding: 0 10px;
+  color:black;
+  font-family: "Prompt",sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  
+  }   
+  
+  .home-footer ul{
+  display: flex;
+  }
+
 }
+
+
 
 
 

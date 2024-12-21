@@ -18,7 +18,8 @@ import facebook from '../assets/facebook.png'
 import insta from '../assets/insta.png'
 import ProductModal from '../components/ProductModal';
 import CarouselData from '../data/CarousalData'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useEffect} from 'react';
 
 
 const Products = () => {
@@ -29,6 +30,33 @@ const Products = () => {
     const [showModal, setShowModal] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState(null);
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [activeLink, setActiveLink] = useState("Home");
+
+  const navigate = useNavigate();
+
+  const handleLinkClick = (link, path) => {
+    setActiveLink(link); // Highlight the active link
+    setIsMenuOpen(false); // Close the dropdown menu
+    navigate(path); // Navigate to the desired page
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
 
   
@@ -55,7 +83,68 @@ const Products = () => {
 
   return (
     <div className='MainContainer'>
-         <header className="header">
+
+         { isMobile ? (
+                  
+                     <nav className="mobile-navbar">
+                       <div className="logo">
+                         <img style={{width:'100%', height:'auto'}} src={Logo} alt='Logo' />
+                       </div>
+                       <div className="menu-icon" onClick={toggleMenu}>
+                         <div className="line"></div>
+                         <div className="line"></div>
+                         <div className="line"></div>
+                         <div className="line"></div>
+                       </div>
+                       {isMenuOpen && (
+                         <div className="dropdown-menu">
+                           <div
+                             className={`nav-link ${activeLink === "Home" ? "active" : ""}`}
+                             onClick={() => handleLinkClick("Home", "/")}
+                           >
+                             Home
+                           </div>
+                           <div
+                             className={`nav-link ${activeLink === "About Us" ? "active" : ""}`}
+                             onClick={() => handleLinkClick("About Us", "/about")}
+                           >
+                             About Us
+                           </div>
+                           <div
+                             className={`nav-link ${activeLink === "Our Products" ? "active" : ""}`}
+                             onClick={() => handleLinkClick("Our Products", "/products")}
+                           >
+                             Our Products
+                           </div>
+                           <div
+                             className={`nav-link ${activeLink === "Contact Us" ? "active" : ""}`}
+                             onClick={() => handleLinkClick("Contact Us", "/contact")}
+                           >
+                             Contact Us
+                           </div>
+                         </div>
+                       )}
+                     </nav>
+                
+         
+               ) :( <header className="header">
+                   <div className="logo">
+                     <img src={Logo} alt="My Logo" />
+                   </div>
+                   <nav className="nav-bar">
+                     <ul>
+                       <li><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
+                       <li><NavLink to="/about" activeClassName="active">About Us</NavLink></li>
+                       <li><NavLink to="/products" activeClassName="active">Products</NavLink></li>
+                       <li><NavLink to="/contact" activeClassName="active">Contact Us</NavLink></li>
+                     </ul>
+                   </nav>
+                 </header>
+                   
+               )
+         
+               }
+         {/* <header className="header">
             <div className="logo">
              <img src={Logo} alt='My Logo' />
             </div>
@@ -67,7 +156,7 @@ const Products = () => {
               <li><NavLink to="/contact" activeClassName="active">Contact Us</NavLink></li>
               </ul>
             </nav>
-          </header>
+          </header> */}
 
            <div className='products-container1'>
                        <div className='cont1-sub-cont1'>
