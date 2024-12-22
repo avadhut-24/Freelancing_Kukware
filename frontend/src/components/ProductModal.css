@@ -63,7 +63,19 @@
     height: 90%; 
     width: 90%;  /* Ensures carousel spans full width of container */
     overflow: hidden;  /* Prevents overflow */
+    /* padding: 10px; */
   }
+
+  .carousel.carousel-slider .control-arrow {
+    padding:0;
+  }
+
+.carousel .control-dots{
+  bottom: 10px;
+}
+  .carousel .control-dots .dot {
+    background-color: #a39e9e;
+}
   
 
   /* Right Content */

@@ -28,12 +28,12 @@ const ProductModal = ({
               <Carousel 
                 showArrows={true} 
                 autoPlay={true} 
-                infiniteLoop={true} 
+                infiniteLoop={false} 
                 showThumbs={false} // Hides thumbnails
               >
                 {carouselImages?.map((image, index) => (
                   <div style={{ height:'100%', width:"100%", display:'flex', flexDirection:'column', justifyContent:'center'}} key={index}>
-                    <img  style={{objectFit:'contain'}} src={image} alt={`Slide ${index + 1}`} />
+                    <img  style={{objectFit:'contain', height:'90%', width:"95%"}} src={image} alt={`Slide ${index + 1}`} />
                   </div>
                 ))}
               </Carousel>
