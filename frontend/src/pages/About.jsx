@@ -190,7 +190,7 @@ const About = () => {
                       </ul>
                     </footer>
                   </div>):(<div>
-                  <div className='container5'>
+                  <div className='about-container4'>
                      <h5> DELIVERING A PREMIUM COOKING EXPERIENCE</h5>
                      <h1> Request More Information</h1>
                      <p> Have we missed anything? Have any other questions?
@@ -202,7 +202,7 @@ const About = () => {
           
                     <div className='hline'> </div>
           
-                    <footer className='home-footer'>
+                    <footer className='about-footer'>
                       <div className='logo'> <img src={Logo} alt=''/></div>
                       <ul className='first'>
                         <li><Link to='/about' style={{textDecoration:'none', color:'inherit'}}>About </Link></li>
