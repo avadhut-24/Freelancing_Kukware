@@ -28,7 +28,7 @@ const ProductModal = ({
               <Carousel 
                 showArrows={true} 
                 autoPlay={true} 
-                infiniteLoop={false} 
+                infiniteLoop={true} 
                 showThumbs={false} // Hides thumbnails
               >
                 {carouselImages?.map((image, index) => (
