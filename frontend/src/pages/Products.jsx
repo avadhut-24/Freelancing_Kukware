@@ -160,7 +160,20 @@ const Products = () => {
 
            <div className='products-container1'>
                        <div className='cont1-sub-cont1'>
-                         <div className='left'>
+                         {isMobile ? (<div className='left'>
+                            <h1> Our Products</h1>
+                            <p> Explore our two exceptional cookware lines: Die Cast  <br/>Technology 
+                            for precise metal thickness, creating strong, <br/>even-heating, 
+                            lightweight pans, and the Press Series<br/> for elegantly designed, lightweight
+                            cookware ensuring <br/>faster, nutritious cooking. Elevate your cooking today.
+                            </p>
+                            <div className='right'>
+                            <div> <img  className='first' src={Rectangle30} alt='' /> </div>
+                            <div> <img  className='second' src={Image5} alt='' /> </div>
+                            <div> <img  className='third'src={Image6} alt='' /> </div>
+                         </div>
+                            <button> See Products</button>
+                         </div>):(<div className='left'>
                             <h1> Our Products</h1>
                             <p> Explore our two exceptional cookware lines: Die Cast <br/> Technology 
                             for precise metal thickness, creating strong, <br/> even-heating, 
@@ -168,15 +181,35 @@ const Products = () => {
                             cookware ensuring faster, <br/>nutritious cooking. Elevate your cooking today.
                             </p>
                             <button> See Products</button>
-                         </div>
-                         <div className='right'>
+                            <div className='right'>
                             <div> <img  className='first' src={Rectangle30} alt='' /> </div>
                             <div> <img  className='second' src={Image5} alt='' /> </div>
                             <div> <img  className='third'src={Image6} alt='' /> </div>
                          </div>
+                         </div>)}
+                        
                          
                        </div>
-                       <div className='cont1-sub-cont2'>
+                       {isMobile ? (<div className='cont1-sub-cont2'>
+                         
+                        <div className='right'>
+                         <h1> Die Cast Series</h1>
+                            <p> Die Cast Technology allows  for metal <br/>thickness exactly  where it’s needed. <br/> So your pan is strong and heats evenly.</p>
+                            <div className='left'>
+                            <div> <img  className='first' src={Rectangle30} alt='' /> </div>
+                            <div> <img  className='second' src={Image7} alt='' /> </div>
+                        </div>
+                            <ul>
+                                <li>Die Cast Body </li>
+                                <li>Super Conductive Bottom </li>
+                                <li>No Deformation </li>
+                                <li>Even Heat Distribution </li>
+                                <li>Available in 3 and 5 layer Coating </li>
+                                <li>Cool Touch Bakelite Handle</li>
+                                <li>PFOA Free</li> 
+                            </ul>
+                        </div>
+                       </div>): (<div className='cont1-sub-cont2'>
                          <div className='left'>
                             <div> <img  className='first' src={Rectangle30} alt='' /> </div>
                             <div> <img  className='second' src={Image7} alt='' /> </div>
@@ -193,12 +226,32 @@ const Products = () => {
                                 <li>Cool Touch Bakelite Handle</li>
                                 <li>PFOA Free</li> 
                             </ul>
-                          
                         </div>
-                       </div>
+                       </div>)}
            </div>
 
-           <div className='hbar'> 
+          {isMobile ? ( <div className='products-container2'>
+             <div className='left'>
+             <h1> Press Series</h1>
+                <p> Elegantly designed and lightweight <br/>cookware which ensures faster and <br/> nutritious cooking with even heat distribution.</p>
+                <div className='right'>
+                <div> <img className='first' src={Rectangle30} alt='' /></div>
+                <div> <img className='second' src={Image8} alt='' /></div>
+             </div>
+                <ul>
+                    <li> PFOA Free</li>
+                    <li>No Harmful Fumes </li>
+                    <li>Even Heat Distribution </li>
+                    <li>Oven Safe </li>
+                    <li>Dishwasher Safe </li>
+                    <li>Gas and Induction Compatible </li>
+                    <li>Available in 3 and 5 layer Coating</li>
+                    <li>Warranty: 1 Year</li> 
+                </ul>
+             </div>
+             
+           </div>):(  <div>
+            <div className='hbar'> 
              <h6>Retains Nutrients </h6>
              <img src={Circle} alt='' />
              <h6>Easy Food Release</h6>
@@ -211,7 +264,6 @@ const Products = () => {
              <img src={Circle} alt='' />
              <h6>20 Years of Excellence</h6>
            </div>
-
            <div className='products-container2'>
              <div className='left'>
              <h1> Press <br/> Series</h1>
@@ -232,7 +284,6 @@ const Products = () => {
                 <div> <img className='second' src={Image8} alt='' /></div>
              </div>
            </div>
-
            <div className='hbar'> 
              <h6>Retains Nutrients </h6>
              <img src={Circle} alt='' />
@@ -246,6 +297,13 @@ const Products = () => {
              <img src={Circle} alt='' />
              <h6>20 Years of Excellence</h6>
            </div>
+            </div>
+           
+           )}
+
+          
+
+           
 
            <div className="product-listing">
                <div style={{height:'170px', backgroundColor:'#EF7C00'}}>
@@ -257,7 +315,8 @@ const Products = () => {
                     activeCategory={activeCategory}
                     setActiveCategory={setActiveCategory}
                 />
-                <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+                {isMobile ? (<div> </div>):(<SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />)}
+                
                 <div className="product-grid">
                     {filteredProducts.map((product) => (
                     <ProductCard
@@ -283,7 +342,34 @@ const Products = () => {
                     )}
            </div>
 
-           <div style={{backgroundColor:'#EF7C00'}}>
+           {isMobile ? (<div style={{backgroundColor:'#EF7C00'}}>
+                     <div className='hline'> </div>
+                   <div className='container5'>
+                      <h5> DELIVERING A PREMIUM <br/>COOKING EXPERIENCE</h5>
+                      
+                      <p>Have any other questions?
+                      <br/>
+                      Feel free to contact us for further support.</p>
+                      <button> <Link to="/contact" style={{textDecoration:'none', color:'inherit'}}>Contact Us</Link></button>
+                      
+                     </div>
+           
+                     <div className='hline'> </div>
+           
+                     <footer className='home-footer'>
+                      
+                       <ul className='first'>
+                         <li><Link to='/about' style={{textDecoration:'none', color:'inherit'}}>About </Link></li>
+                         <li><Link to='/products' style={{textDecoration:'none', color:'inherit', cursor:'pointer'}}> Products</Link></li>
+                         <li><Link to='/' style={{textDecoration:'none', color:'inherit', cursor:'pointer'}}>Home </Link></li>
+                       </ul>
+                       <ul className='second'>
+                         <img style={{cursor:'pointer'}} src={linkedin} alt='' />
+                         <img style={{cursor:'pointer'}} src={facebook} alt='' />
+                         <img style={{cursor:'pointer'}} src={insta} alt='' />
+                       </ul>
+                     </footer>
+                   </div>):(<div style={{backgroundColor:'#EF7C00'}}>
            <div className='products-container5'>
            <h5 style={{marginTop:'20px'}}> DELIVERING A PREMIUM COOKING EXPERIENCE</h5>
            <h1> Request More Information</h1>
@@ -309,7 +395,7 @@ const Products = () => {
                <img style={{cursor:'pointer'}} src={insta} alt='' />
             </ul>
           </footer>
-           </div>
+           </div>)}
     </div>
   )
 }

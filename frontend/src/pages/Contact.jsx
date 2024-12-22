@@ -90,15 +90,15 @@ const Contact = () => {
            <li><NavLink to="/contact" activeClassName="active">Contact Us</NavLink></li>
          </ul>
        </nav>
-     </header>
-       
+     </header>   
    )
-
-   }
+  }
     
-     <div className='contact-cont1'>
+     {isMobile ? (<div className='contact-cont1'>
+      <h1> Making every<br/> kitchen<span style={{color:'#EF7C00'}}> stylish! </span> </h1>
+     </div>):(<div className='contact-cont1'>
       <h1> MAKING EVERY<br/> KITCHEN <span style={{color:'#EF7C00'}}> STYLISH! </span> </h1>
-     </div>
+     </div>)}
 
      <div className='contact-cont2'>
        <div className='l'>
@@ -109,18 +109,6 @@ const Contact = () => {
        <h7> Manufactured and Marketed by:</h7>
         <h1> VARDHAMAN MARKETING</h1>
         
-        {/* <div style={{display:'flex'}}>
-        <h7> Address</h7>
-        <p >Ground, CP-19, CP-20, DP-21, DP-22, Ambedakar Industrial Estate, KSSIDC, Jigani, Bengaluru, Karnataka, 560105</p>
-        </div>
-        <div style={{display:'flex'}}>
-        <h7> Email</h7>
-        <p>vardhmkt@gmail.com</p>
-        </div>
-        <div style={{display:'flex'}}>
-        <h7> Mobile No.s</h7>
-        <p>+91 9731391396 | +91 9353906189</p>
-        </div> */}
 
         <div className="contact-info">
         <div className="contact-item">
@@ -135,7 +123,7 @@ const Contact = () => {
             <span className="label">Mobile No:</span>
             <span className="value">+91 9731391396 | +91 9353906189</span>
         </div>
-</div>
+        </div>
        </div>
        
      </div>

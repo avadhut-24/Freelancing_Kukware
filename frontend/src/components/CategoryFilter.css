@@ -43,6 +43,52 @@
       background-color: orange; /* Line color */
     }
   
+  @media (max-width:767px){
+    .category-filter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    border-radius: 40px; /* Rounded corners for the filter container */
+    padding: 10px 10px;
+    gap: 2px; /* Space between buttons */
+    margin: 0 15vw 50px 15vw;
+  }
+
+  
+  .category-filter button {
+    flex: 1;
+    text-align: center;
+    padding: 5px 15px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #ff8000; /* Orange text color */
+    background-color: white;
+    /* border-right: 1px solid #ff8000; */
+    border:none;
+    cursor: pointer;
+    border-radius: 0px;
+    transition: color 0.3s, background-color 0.3s;
+    margin: 0;
+    position: relative;
+  }
+
+  .category-filter button.active {
+    
+    color: #EF7C00; /* Change text color */
+    font-weight: 800; /* Optional: Make the text bold */
+  }
+
+    .category-filter button:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: -1px; /* Adjusts the line's position */
+      top: 0; /* Aligns the line with the top of the button */
+      height: 100%; /* Matches the height of the button */
+      width: 3px; /* Thickness of the vertical line */
+      background-color: orange; /* Line color */
+    }
+  }  
   
   @media (min-width:1300px){
     .category-filter {

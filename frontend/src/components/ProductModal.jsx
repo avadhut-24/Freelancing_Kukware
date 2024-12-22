@@ -32,7 +32,7 @@ const ProductModal = ({
                 showThumbs={false} // Hides thumbnails
               >
                 {carouselImages?.map((image, index) => (
-                  <div style={{padding:'10px', height:'100%', width:"100%", display:'flex', flexDirection:'column', justifyContent:'center'}} key={index}>
+                  <div style={{ height:'100%', width:"100%", display:'flex', flexDirection:'column', justifyContent:'center'}} key={index}>
                     <img  style={{objectFit:'contain'}} src={image} alt={`Slide ${index + 1}`} />
                   </div>
                 ))}
@@ -45,10 +45,10 @@ const ProductModal = ({
             <h4 className="modal-category">{category}</h4>
             <h2 className="modal-title">{productName}</h2>
             {productName === "3 Piece Set" && category === "Press Series" && (
-              <h4>Includes: Kadai, Fry Pan, and Flat Tawa</h4>
+              <h4 className="descrptn">Includes: Kadai, Fry Pan, and Flat Tawa</h4>
             )}
             {productName === "3 Piece Set" && category === "Die Cast Series" && (
-              <h4>includes: Grill Pan, Fry Pan and Flat Tawa</h4>
+              <h4 className="descrptn">includes: Grill Pan, Fry Pan and Flat Tawa</h4>
             )}
             </div>
               { tableData.length > 0 && (

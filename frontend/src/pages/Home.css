@@ -8,7 +8,7 @@
     overflow-y: auto;
 }
 
-@media (max-width:750px){
+@media (max-width:767px){
 
   .mobile-navbar {
     display: flex;
@@ -548,7 +548,7 @@
 }
 
 
-@media (max-width: 1270px) and (min-width:750px) {
+@media (max-width: 1270px) and (min-width:768px) {
 .header{
     display: flex;
     align-items: center;
@@ -571,7 +571,7 @@ header .logo img{
 .nav-bar .active {
   color: #EF7C00;  /* Highlight active link */
   font-weight: bold;  /* Make active link bold */
-  text-decoration: underline;  /* Optional: underline active link */
+  text-decoration: none;  /* Optional: underline active link */
 }
 
 

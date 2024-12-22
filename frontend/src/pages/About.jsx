@@ -2,9 +2,12 @@ import {useEffect, useState} from 'react'
 import './About.css'
 import Logo from '../assets/KukwareLogo.png';
 // import Rectangle_30 from './assets/Rectangle-30.png'
-import Afordability from '../assets/affordability-white.png'
-import Quality from '../assets/Quality-white.png'
-import Innovation from '../assets/Innovation-white.png'
+import Afordability_white from '../assets/affordability-white.png'
+import Afordability from '../assets/affordability.png'
+import Quality from '../assets/Quality.png'
+import Quality_white from '../assets/Quality-white.png'
+import Innovation from '../assets/Innovation.png'
+import Innovation_white from '../assets/Innovation-white.png'
 import image6 from '../assets/image6.png'
 import Rectangle_30 from '../assets/Rectangle-30.png'
 import image3 from '../assets/image3.png'
@@ -125,16 +128,19 @@ const About = () => {
             </div>
           </div>
           </div>
-
-          <div className='about-container2'>
+          
+           {isMobile ? (<div className='about-container2'>
+            <h1> WE ARE THE <span id='about-container2-span'> PREFERRED </span> CHOICE!</h1>
+            <p> Vardhaman has been at the forefront of<br/> revolutionising culinary experience in households<br/> worldwide for 20 years! Heres Why </p>
+          </div>):(<div className='about-container2'>
             <h1> WE ARE THE <span id='about-container2-span'> PREFERRED </span> CHOICE!</h1>
             <p> Vardhaman has been at the forefront of revolutionising culinary experience in <br/>households worldwide for 20 years! Heres Why </p>
-          </div>
+          </div>)}
 
           <div className='about-container3'>
               <div className='about-circleWrapper'>
               <div className='about-circle'> 
-                <img src={Afordability} alt='affordability'/>
+                <img src={ isMobile ? Afordability : Afordability_white} alt='affordability'/>
               </div>
               <p> Seamlessness in Usage and <br/> Affordability</p>
               </div>
@@ -142,21 +148,49 @@ const About = () => {
 
               <div className='about-circleWrapper'>
               <div className='about-circle'> 
-              <img src={Quality} alt='affordability'/>
+              <img src={ isMobile ? Quality : Quality_white} alt='affordability'/>
               </div>
-              <p> Seamlessness in Usage and <br/> Affordability</p>
+              <p> Uncompromising Quality</p>
               </div>
               <div className='about-line'> </div>
               
               <div className='about-circleWrapper'>
               <div className='about-circle'> 
-              <img src={Innovation} alt='affordability'/>
+              <img src={ isMobile ? Innovation : Innovation_white} alt='affordability'/>
               </div>
-              <p> Seamlessness in Usage and <br/> Affordability</p>
+              <p> Futuristic & Dynamic Innovation</p>
               </div>  
           </div>
 
-          <div className='about-container4'>
+          { isMobile ? (<div style={{backgroundColor:'#EF7C00', borderTopRightRadius:'80px'}}>
+                    <div className='hline'> </div>
+                  <div className='container5'>
+                     <h5> DELIVERING A PREMIUM <br/>COOKING EXPERIENCE</h5>
+                     
+                     <p>Have any other questions?
+                     <br/>
+                     Feel free to contact us for further support.</p>
+                     <button> <Link to="/contact" style={{textDecoration:'none', color:'inherit'}}>Contact Us</Link></button>
+                     
+                    </div>
+          
+                    <div className='hline'> </div>
+          
+                    <footer className='home-footer'>
+                     
+                      <ul className='first'>
+                        <li><Link to='/about' style={{textDecoration:'none', color:'inherit'}}>About </Link></li>
+                        <li><Link to='/products' style={{textDecoration:'none', color:'inherit', cursor:'pointer'}}> Products</Link></li>
+                        <li><Link to='/' style={{textDecoration:'none', color:'inherit', cursor:'pointer'}}>Home </Link></li>
+                      </ul>
+                      <ul className='second'>
+                        <img style={{cursor:'pointer'}} src={linkedin} alt='' />
+                        <img style={{cursor:'pointer'}} src={facebook} alt='' />
+                        <img style={{cursor:'pointer'}} src={insta} alt='' />
+                      </ul>
+                    </footer>
+                  </div>):(<div>
+                  <div className='container5'>
                      <h5> DELIVERING A PREMIUM COOKING EXPERIENCE</h5>
                      <h1> Request More Information</h1>
                      <p> Have we missed anything? Have any other questions?
@@ -166,21 +200,22 @@ const About = () => {
                      <h7>© 2024 Vardhaman LLC</h7>
                     </div>
           
-                    <div className='about-hline'> </div>
+                    <div className='hline'> </div>
           
-                    <foote className='about-footer' >
-                      <div className='logo'> <img style={{cursor:'pointer'}} src={Logo} alt=''/></div>
+                    <footer className='home-footer'>
+                      <div className='logo'> <img src={Logo} alt=''/></div>
                       <ul className='first'>
-                      <li > <Link to='/about' style={{textDecoration:'none', color:'inherit'}}>About </Link></li>
-                      <li><Link to='/products' style={{textDecoration:'none', color:'inherit'}}> Products</Link></li>
-                      <li><Link to='/' style={{textDecoration:'none', color:'inherit'}}>Home </Link></li>
+                        <li><Link to='/about' style={{textDecoration:'none', color:'inherit'}}>About </Link></li>
+                        <li><Link to='/products' style={{textDecoration:'none', color:'inherit', cursor:'pointer'}}> Products</Link></li>
+                        <li><Link to='/' style={{textDecoration:'none', color:'inherit', cursor:'pointer'}}>Home </Link></li>
                       </ul>
                       <ul>
-                         <img style={{cursor:'pointer'}} src={linkedin} alt='' />
-                         <img style={{cursor:'pointer'}} src={facebook} alt='' />
-                         <img style={{cursor:'pointer'}} src={insta} alt='' />
+                        <img style={{cursor:'pointer'}} src={linkedin} alt='' />
+                        <img style={{cursor:'pointer'}} src={facebook} alt='' />
+                        <img style={{cursor:'pointer'}} src={insta} alt='' />
                       </ul>
-                    </foote>
+                    </footer>
+                  </div>)}
          </div>
     </div>
   )
