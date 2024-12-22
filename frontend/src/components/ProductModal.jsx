@@ -30,6 +30,7 @@ const ProductModal = ({
                 autoPlay={true} 
                 infiniteLoop={true} 
                 showThumbs={false} // Hides thumbnails
+                showStatus={false}
               >
                 {carouselImages?.map((image, index) => (
                   <div style={{ height:'100%', width:"100%", display:'flex', flexDirection:'column', justifyContent:'center'}} key={index}>

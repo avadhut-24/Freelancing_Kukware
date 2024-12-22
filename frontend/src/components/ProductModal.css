@@ -66,6 +66,10 @@
     padding: 10px;
   }
 
+  .carousel-indicators {
+    display: none; /* Hides the pagination dots */
+}
+
   .carousel.carousel-slider .control-arrow {
     padding:0;
   }
