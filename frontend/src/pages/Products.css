@@ -363,7 +363,7 @@
     border: 1px solid #ffffffa7;
     transform: rotate(-12.34deg);
     opacity: 0.5;
-    margin-left: 90px;
+    margin-left: 150px;
     margin-top: 10px;
 }
 
@@ -372,8 +372,8 @@
     width: auto;
     position:absolute;
     transform: rotate(7.34deg);
-    margin-left: 95px;
-    margin-top: -180px;
+    margin-left: 175px;
+    margin-top: -190px;
     z-index: 2;
 }
 
@@ -382,7 +382,7 @@
     width: auto;
     position:absolute;
     transform: rotate(7.34deg);
-    margin-left: -140px;
+    margin-left: -60px;
     margin-top: -410px;
     z-index: 1;
 }
