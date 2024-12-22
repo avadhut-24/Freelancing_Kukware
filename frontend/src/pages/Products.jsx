@@ -61,6 +61,15 @@ const Products = () => {
 
   
     const categories = [...new Set(products.map((product) => product.category))];
+
+    const counts = products.reduce(
+      (acc, product) => {
+        acc.total++;
+        acc[product.category] = (acc[product.category] || 0) + 1;
+        return acc;
+      },
+      { total: 0 } // Initialize with total count as 0
+    );
   
     const filteredProducts = products.filter((product) => {
       const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase());
@@ -316,6 +325,7 @@ const Products = () => {
                     categories={categories}
                     activeCategory={activeCategory}
                     setActiveCategory={setActiveCategory}
+                    counts={counts}
                 />
                 {isMobile ? (<div> </div>):(<SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />)}
                 

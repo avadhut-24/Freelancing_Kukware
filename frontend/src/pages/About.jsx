@@ -209,7 +209,7 @@ const About = () => {
                         <li><Link to='/products' style={{textDecoration:'none', color:'inherit', cursor:'pointer'}}> Products</Link></li>
                         <li><Link to='/' style={{textDecoration:'none', color:'inherit', cursor:'pointer'}}>Home </Link></li>
                       </ul>
-                      <ul>
+                      <ul className='second'>
                         <img style={{cursor:'pointer'}} src={linkedin} alt='' />
                         <img style={{cursor:'pointer'}} src={facebook} alt='' />
                         <img style={{cursor:'pointer'}} src={insta} alt='' />
