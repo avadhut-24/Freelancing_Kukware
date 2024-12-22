@@ -743,6 +743,10 @@ font-weight: 600;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
   }
   
+  .cont1-sub-cont1 .left{
+    display: flex;
+  }
+
   .cont1-sub-cont1 .right{
       position:relative;
   }
