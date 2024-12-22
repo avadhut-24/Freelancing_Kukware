@@ -33,7 +33,7 @@ const ProductModal = ({
               >
                 {carouselImages?.map((image, index) => (
                   <div style={{ height:'100%', width:"100%", display:'flex', flexDirection:'column', justifyContent:'center'}} key={index}>
-                    <img  style={{objectFit:'contain', height:'85%', width:"95%"}} src={image} alt={`Slide ${index + 1}`} />
+                    <img  style={{objectFit:'fill', height:'85%', width:"95%"}} src={image} alt={`Slide ${index + 1}`} />
                   </div>
                 ))}
               </Carousel>

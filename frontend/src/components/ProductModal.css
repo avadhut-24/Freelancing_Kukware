@@ -63,7 +63,7 @@
     height: 90%; 
     width: 90%;  /* Ensures carousel spans full width of container */
     overflow: hidden;  /* Prevents overflow */
-    /* padding: 10px; */
+    padding: 10px;
   }
 
   .carousel.carousel-slider .control-arrow {
