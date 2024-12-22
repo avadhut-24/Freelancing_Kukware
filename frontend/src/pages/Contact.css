@@ -6,7 +6,7 @@
     width: 100%;   
     /* min-height: 180vh; */
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 
 

@@ -93,6 +93,10 @@ const Contact = () => {
      </header>   
    )
   }
+
+  <div>
+    
+  </div>
     
      {isMobile ? (<div className='contact-cont1'>
       <h1> Making every<br/> kitchen<span style={{color:'#EF7C00'}}> stylish! </span> </h1>
