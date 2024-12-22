@@ -174,6 +174,7 @@ const Products = () => {
                          </div>
                             <button> See Products</button>
                          </div>):(<div className='left'>
+                            <div>
                             <h1> Our Products</h1>
                             <p> Explore our two exceptional cookware lines: Die Cast <br/> Technology 
                             for precise metal thickness, creating strong, <br/> even-heating, 
@@ -181,6 +182,7 @@ const Products = () => {
                             cookware ensuring faster, <br/>nutritious cooking. Elevate your cooking today.
                             </p>
                             <button> See Products</button>
+                            </div>
                             <div className='right'>
                             <div> <img  className='first' src={Rectangle30} alt='' /> </div>
                             <div> <img  className='second' src={Image5} alt='' /> </div>

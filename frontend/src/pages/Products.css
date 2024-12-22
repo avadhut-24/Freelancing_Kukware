@@ -227,7 +227,7 @@
     font-weight: 400;
     /* margin-left: 7px; */
     /* padding-left: 0px; */
-    margin-top: 30px;
+    margin-top: 60px;
     margin-right: 20px;
     /* text-align: right; */
   }
@@ -307,6 +307,7 @@
 
 .cont1-sub-cont1{
     display: flex;
+    flex-direction: row;
     height: 250px;
     width: auto;
     /* margin-left: 10px;*/
@@ -345,6 +346,10 @@
   color: white; /* Change text color on hover */
   transform: scale(1.05); /* Slightly increase button size */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+.cont1-sub-cont1 .left{
+  display: flex;
 }
 
 .cont1-sub-cont1 .right{
@@ -395,6 +400,7 @@
 
 /* .cont1-sub-cont2 .left{
     margin-right: 0px;
+    display: flex;
 } */
 
 .cont1-sub-cont2 .left .first {
