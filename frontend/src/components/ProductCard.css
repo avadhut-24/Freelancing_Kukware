@@ -1,4 +1,4 @@
-.imgdiv{
+.imgdiv {
     display: flex;
     justify-content: center;
     height: 70%;
@@ -6,14 +6,14 @@
     /* object-fit: contain; */
 }
 
-.product-card img{
+.product-card img {
     height: 100%;
     width: 100%;
     object-fit: contain;
 
 }
 
-.product-card{
+.product-card {
     background-color: white;
     padding: 10px;
     border-radius: 7px;
@@ -24,92 +24,93 @@
     /* aspect-ratio: 3 / 3.5;  */
 }
 
-.product-card .product-info{
+.product-card .product-info {
     /* display: flex;
     flex-direction: column; */
+    padding: 10px;
     background-color: #EF7C00;
-    border-radius: 5px;
+    border-radius: 15px;
     text-align: left;
     /* padding: 0 px; */
     /* overflow-x: auto; */
 
 }
 
-.product-card h4{
+.product-card h4 {
     margin: 2px 0 0px 0;
     font-size: 20px;
     padding: 2px 0 10px 5px;
     font-family: "Prompt", sans-serif;
-    font-weight:600;
+    font-weight: 600;
     color: white;
     line-height: 1;
 }
 
-.product-card p{
-   font-family: "Promot", sans-serif;
-   font-size: 10px;
-   margin: 0px;
-   padding-top: 10px;
-   padding-left: 5px;
-   color: white ;
+.product-card p {
+    font-family: "Promot", sans-serif;
+    font-size: 10px;
+    margin: 0px;
+    padding-top: 10px;
+    padding-left: 5px;
+    color: white;
 }
 
 
 @media (min-width:1250px) {
-    .imgdiv{
+    .imgdiv {
         display: flex;
         justify-content: center;
         height: 70%;
         width: 100%;
         /* object-fit: contain; */
     }
-    
-    .product-card img{
+
+    .product-card img {
         height: 100%;
         width: 100%;
         object-fit: contain;
-    
+
     }
-    
-    .product-card{
+
+    .product-card {
         background-color: white;
         padding: 10px;
-        border-radius: 7px;
+        border-radius: 15px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         /* align-items : center; */
         /* aspect-ratio: 3 / 3.5;  */
     }
-    
-    .product-card .product-info{
+
+    .product-card .product-info {
         /* display: flex;
         flex-direction: column; */
         background-color: #EF7C00;
-        border-radius: 5px;
+        border-radius: 15px;
         text-align: left;
         /* padding: 0 px; */
         /* overflow-x: auto; */
-    
+
     }
-    
-    .product-card h4{
+
+    .product-card h4 {
         margin: 2px 0 0px 0;
         font-size: 24px;
         padding: 2px 0 10px 5px;
         font-family: "Prompt", sans-serif;
-        font-weight:600;
+        font-weight: 600;
         color: white;
         line-height: 1;
     }
-    
-    .product-card p{
-       font-family: "Promot", sans-serif;
-       font-size: 12px;
-       margin: 0px;
-       padding-top: 10px;
-       padding-left: 5px;
-       color: white ;
+
+    .product-card p {
+        font-family: "Promot", sans-serif;
+        font-size: 12px;
+        margin: 0px;
+        padding-top: 10px;
+        padding-left: 5px;
+        color: white;
     }
-    
+
 }
