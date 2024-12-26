@@ -12,10 +12,11 @@ import image6 from '../assets/image6.png'
 import Rectangle_30 from '../assets/Rectangle-30.png'
 import image3 from '../assets/image3.png'
 import image4 from '../assets/image4.png'
-import linkedin from '../assets/linkedin.png'
-import facebook from '../assets/facebook.png'
-import insta from '../assets/insta.png'
+import linkedin from '../assets/whiteLinkedin.png'
+import facebook from '../assets/whiteFacebook.png'
+import insta from '../assets/whiteInsta.png'
 import {Link} from 'react-router-dom'
+import Footer from '../components/Footer.jsx'
 import { NavLink, useNavigate } from 'react-router-dom';
 
 
@@ -190,7 +191,7 @@ const About = () => {
                       </ul>
                     </footer>
                   </div>):(<div>
-                  <div className='about-container4'>
+                  {/* <div className='about-container4'>
                      <h5> DELIVERING A PREMIUM COOKING EXPERIENCE</h5>
                      <h1> Request More Information</h1>
                      <p> Have we missed anything? Have any other questions?
@@ -214,7 +215,15 @@ const About = () => {
                         <img style={{cursor:'pointer'}} src={facebook} alt='' />
                         <img style={{cursor:'pointer'}} src={insta} alt='' />
                       </ul>
-                    </footer>
+                    </footer> */}
+                    <Footer
+                      color="black"
+                      insta={insta}
+                      facebook={facebook}
+                      linkedin={linkedin}
+                      color1="white"
+                      backgroundColor="#EF7C00"
+                    />
                   </div>)}
          </div>
     </div>

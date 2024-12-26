@@ -16,6 +16,7 @@ import insta from '../assets/insta.png'
 import {Link, useNavigate} from 'react-router-dom'
 import { NavLink } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
+import Footer from '../components/Footer.jsx'; 
  
 
 
@@ -289,7 +290,11 @@ function Home() {
               <img style={{cursor:'pointer'}} src={insta} alt='' />
             </ul>
           </footer>
-        </div>):(<div>
+        </div>):(
+          <>
+
+          
+          {/* <div>
         <div className='container5'>
            <h5> DELIVERING A PREMIUM COOKING EXPERIENCE</h5>
            <h1> Request More Information</h1>
@@ -315,7 +320,18 @@ function Home() {
               <img style={{cursor:'pointer'}} src={insta} alt='' />
             </ul>
           </footer>
-        </div>)}
+        </div> */}
+
+      <Footer
+        color="black"
+        insta={insta}
+        facebook={facebook}
+        linkedin={linkedin}
+        color1="#3D3D3D"
+        backgroundColor="none"
+      />
+        </>
+        )}
           
       </div>
    

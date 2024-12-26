@@ -13,13 +13,14 @@ import ProductCard from '../components/ProductCard';
 import SearchBar from '../components/SearchBar';
 import CategoryFilter from '../components/CategoryFilter';
 import { useState } from 'react';
-import linkedin from '../assets/linkedin.png'
-import facebook from '../assets/facebook.png'
-import insta from '../assets/insta.png'
+import linkedin from '../assets/whiteLinkedin.png'
+import facebook from '../assets/whiteFacebook.png'
+import insta from '../assets/whiteInsta.png'
 import ProductModal from '../components/ProductModal';
 import CarouselData from '../data/CarousalData'
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useEffect} from 'react';
+import Footer from '../components/Footer'
 
 
 const Products = () => {
@@ -381,7 +382,9 @@ const Products = () => {
                          <img style={{cursor:'pointer'}} src={insta} alt='' />
                        </ul>
                      </footer>
-                   </div>):(<div style={{backgroundColor:'#EF7C00'}}>
+                   </div>):(
+                    <>
+                    {/* <div style={{backgroundColor:'#EF7C00'}}>
            <div className='products-container5'>
            <h5 style={{marginTop:'20px'}}> DELIVERING A PREMIUM COOKING EXPERIENCE</h5>
            <h1> Request More Information</h1>
@@ -407,7 +410,17 @@ const Products = () => {
                <img style={{cursor:'pointer'}} src={insta} alt='' />
             </ul>
           </footer>
-           </div>)}
+           </div> */}
+           <Footer
+              color="black"
+              insta={insta}
+              facebook={facebook}
+              linkedin={linkedin}
+              color1="white"
+              backgroundColor="#EF7C00"
+            />
+                    </>
+                    )}
     </div>
   )
 }
