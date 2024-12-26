@@ -183,22 +183,27 @@ const Products = () => {
                             <div> <img  className='third'src={Image6} alt='' /> </div>
                          </div>
                             <button> See Products</button>
-                         </div>):(<div className='left'>
-                            <div>
-                            <h1> Our Products</h1>
-                            <p> Explore our two exceptional cookware lines: Die Cast <br/> Technology 
-                            for precise metal thickness, creating strong, <br/> even-heating, 
-                            lightweight pans, and the Press Series for <br/>elegantly designed, lightweight 
-                            cookware ensuring faster, <br/>nutritious cooking. Elevate your cooking today.
-                            </p>
-                            <button> See Products</button>
-                            </div>
-                            <div className='right'>
-                            <div> <img  className='first' src={Rectangle30} alt='' /> </div>
-                            <div> <img  className='second' src={Image5} alt='' /> </div>
-                            <div> <img  className='third'src={Image6} alt='' /> </div>
-                         </div>
-                         </div>)}
+                         </div>):(<div className="mycontainer">
+              <div className="myleft">
+                <div className='left-text'>
+                  <h1> Our Products</h1>
+                  <p> Explore our two exceptional cookware lines: Die Cast <br /> Technology
+                    for precise metal thickness, creating strong, <br /> even-heating,
+                    lightweight pans, and the Press Series for <br />elegantly designed, lightweight
+                    cookware ensuring faster, <br />nutritious cooking. Elevate your cooking today.
+                  </p>
+                  <button> See Products</button>
+                </div>
+              </div>
+
+              <div className="myright">
+                <div className='myimages'>
+                  <img className='background' src={Rectangle30} alt='' />
+                  <img className='pan' src={Image6} alt='' />
+                  <img className='grill' src={Image5} alt='' />
+                </div>
+              </div>
+            </div>)}
                         
                          
                        </div>
@@ -384,42 +389,15 @@ const Products = () => {
                      </footer>
                    </div>):(
                     <>
-                    {/* <div style={{backgroundColor:'#EF7C00'}}>
-           <div className='products-container5'>
-           <h5 style={{marginTop:'20px'}}> DELIVERING A PREMIUM COOKING EXPERIENCE</h5>
-           <h1> Request More Information</h1>
-           <p> Have we missed anything? Have any other questions?
-           <br/>
-           Feel free to contact us for further support.</p>
-           <button> <Link to="/contact" style={{textDecoration:'none', color:'inherit'}}>Contact Us</Link></button>
-           <h7>© 2024 Vardhaman LLC</h7>
-          </div>
-
-          <div className='hline'> </div>
-
-          <footer className='products-footer'  style={{marginBottom:'0px'}}>
-            <div className='logo'> <img src={Logo} alt=''/></div>
-            <ul className='first'>
-             <li > <Link to='/about' style={{textDecoration:'none', color:'inherit'}}>About </Link></li>
-                                  <li><Link to='/products' style={{textDecoration:'none', color:'inherit'}}> Products</Link></li>
-                                   <li><Link to='/' style={{textDecoration:'none', color:'inherit'}}>Home </Link></li>
-            </ul>
-            <ul>
-              <img style={{cursor:'pointer'}} src={linkedin} alt='' />
-              <img style={{cursor:'pointer'}} src={facebook} alt='' />
-               <img style={{cursor:'pointer'}} src={insta} alt='' />
-            </ul>
-          </footer>
-           </div> */}
-           <Footer
-              color="black"
-              insta={insta}
-              facebook={facebook}
-              linkedin={linkedin}
-              color1="white"
-              backgroundColor="#EF7C00"
-            />
-                    </>
+                      <Footer
+                          color="white"
+                          insta={insta}
+                          facebook={facebook}
+                          linkedin={linkedin}
+                          color1="white"
+                          backgroundColor="#EF7C00"
+                        />
+                        </>
                     )}
     </div>
   )

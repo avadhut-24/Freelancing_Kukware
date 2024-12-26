@@ -191,34 +191,9 @@ const About = () => {
                       </ul>
                     </footer>
                   </div>):(<div>
-                  {/* <div className='about-container4'>
-                     <h5> DELIVERING A PREMIUM COOKING EXPERIENCE</h5>
-                     <h1> Request More Information</h1>
-                     <p> Have we missed anything? Have any other questions?
-                     <br/>
-                     Feel free to contact us for further support.</p>
-                     <button> <Link to="/contact" style={{textDecoration:'none', color:'inherit'}}>Contact Us</Link></button>
-                     <h7>© 2024 Vardhaman LLC</h7>
-                    </div>
-          
-                    <div className='hline'> </div>
-          
-                    <footer className='about-footer'>
-                      <div className='logo'> <img src={Logo} alt=''/></div>
-                      <ul className='first'>
-                        <li><Link to='/about' style={{textDecoration:'none', color:'inherit'}}>About </Link></li>
-                        <li><Link to='/products' style={{textDecoration:'none', color:'inherit', cursor:'pointer'}}> Products</Link></li>
-                        <li><Link to='/' style={{textDecoration:'none', color:'inherit', cursor:'pointer'}}>Home </Link></li>
-                      </ul>
-                      <ul>
-                        <img style={{cursor:'pointer'}} src={linkedin} alt='' />
-                        <img style={{cursor:'pointer'}} src={facebook} alt='' />
-                        <img style={{cursor:'pointer'}} src={insta} alt='' />
-                      </ul>
-                    </footer> */}
                     <Footer
-                      color="black"
-                      insta={insta}
+                      color="white"
+                      insta={insta} 
                       facebook={facebook}
                       linkedin={linkedin}
                       color1="white"
