@@ -413,6 +413,7 @@
     display: flex;
 } */
 
+
   .cont1-sub-cont2 .left .first {
     height: 270px;
     width: 290px;
@@ -423,6 +424,7 @@
     margin-left: 0px;
     margin-top: 60px;
   }
+
 
   .cont1-sub-cont2 .left .second {
     position: absolute;

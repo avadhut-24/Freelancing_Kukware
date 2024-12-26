@@ -13,13 +13,16 @@ import ProductCard from '../components/ProductCard';
 import SearchBar from '../components/SearchBar';
 import CategoryFilter from '../components/CategoryFilter';
 import { useState } from 'react';
-import linkedin from '../assets/linkedin.png'
-import facebook from '../assets/facebook.png'
-import insta from '../assets/insta.png'
+import linkedin from '../assets/whiteLinkedin.png'
+import facebook from '../assets/whiteFacebook.png'
+import insta from '../assets/whiteInsta.png'
 import ProductModal from '../components/ProductModal';
 import CarouselData from '../data/CarousalData'
 import { NavLink, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+
+import { useEffect} from 'react';
+import Footer from '../components/Footer'
+
 
 
 const Products = () => {
@@ -207,6 +210,59 @@ const Products = () => {
             //   </div>
             // </div>
           )}
+                 
+                {selectedProduct && (
+                      <ProductModal
+                        showModal={showModal}
+                        onClose={closeModal}
+                        productName={selectedProduct}
+                        carouselImages={CarouselData[selectedCategory][selectedProduct]?.images || []}
+                        tableData={CarouselData[selectedCategory][selectedProduct]?.tableData || []}
+                        category={selectedCategory}
+                        
+                      />
+                    )}
+           </div>
+
+           {isMobile ? (<div style={{backgroundColor:'#EF7C00'}}>
+                     <div className='hline'> </div>
+                   <div className='container5'>
+                      <h5> DELIVERING A PREMIUM <br/>COOKING EXPERIENCE</h5>
+                      
+                      <p>Have any other questions?
+                      <br/>
+                      Feel free to contact us for further support.</p>
+                      <button> <Link to="/contact" style={{textDecoration:'none', color:'inherit'}}>Contact Us</Link></button>
+                      
+                     </div>
+           
+                     <div className='hline'> </div>
+           
+                     <footer className='home-footer'>
+                      
+                       <ul className='first'>
+                         <li><Link to='/about' style={{textDecoration:'none', color:'inherit'}}>About </Link></li>
+                         <li><Link to='/products' style={{textDecoration:'none', color:'inherit', cursor:'pointer'}}> Products</Link></li>
+                         <li><Link to='/' style={{textDecoration:'none', color:'inherit', cursor:'pointer'}}>Home </Link></li>
+                       </ul>
+                       <ul className='second'>
+                         <img style={{cursor:'pointer'}} src={linkedin} alt='' />
+                         <img style={{cursor:'pointer'}} src={facebook} alt='' />
+                         <img style={{cursor:'pointer'}} src={insta} alt='' />
+                       </ul>
+                     </footer>
+                   </div>):(
+                    <>
+                    {/* <div style={{backgroundColor:'#EF7C00'}}>
+           <div className='products-container5'>
+           <h5 style={{marginTop:'20px'}}> DELIVERING A PREMIUM COOKING EXPERIENCE</h5>
+           <h1> Request More Information</h1>
+           <p> Have we missed anything? Have any other questions?
+           <br/>
+           Feel free to contact us for further support.</p>
+           <button> <Link to="/contact" style={{textDecoration:'none', color:'inherit'}}>Contact Us</Link></button>
+           <h7>© 2024 Vardhaman LLC</h7>
+          </div>
 
 
         </div>
@@ -246,177 +302,18 @@ const Products = () => {
               <li>Cool Touch Bakelite Handle</li>
               <li>PFOA Free</li>
             </ul>
-          </div>
-        </div>)}
-      </div>
-
-      {isMobile ? (<div className='products-container2'>
-        <div className='left'>
-          <h1> Press Series</h1>
-          <p> Elegantly designed and lightweight <br />cookware which ensures faster and <br /> nutritious cooking with even heat distribution.</p>
-          <div className='right'>
-            <div> <img className='first' src={Rectangle30} alt='' /></div>
-            <div> <img className='second' src={Image8} alt='' /></div>
-          </div>
-          <ul>
-            <li> PFOA Free</li>
-            <li>No Harmful Fumes </li>
-            <li>Even Heat Distribution </li>
-            <li>Oven Safe </li>
-            <li>Dishwasher Safe </li>
-            <li>Gas and Induction Compatible </li>
-            <li>Available in 3 and 5 layer Coating</li>
-            <li>Warranty: 1 Year</li>
-          </ul>
-        </div>
-
-      </div>) : (<div>
-        <div className='hbar'>
-          <h6>Retains Nutrients </h6>
-          <img src={Circle} alt='' />
-          <h6>Easy Food Release</h6>
-          <img src={Circle} alt='' />
-          <h6>Easy to Clean</h6>
-          <img src={Circle} alt='' />
-          <h6>Less Oil Cooking</h6>
-          <img src={Circle} alt='' />
-          <h6>Low Gas Consumption</h6>
-          <img src={Circle} alt='' />
-          <h6>20 Years of Excellence</h6>
-        </div>
-        <div className='products-container2'>
-          <div className='left'>
-            <h1> Press <br /> Series</h1>
-            <p> Elegantly designed and lightweight <br />cookware which ensures faster and <br /> nutritious cooking with even heat distribution.</p>
-            <ul>
-              <li> PFOA Free</li>
-              <li>No Harmful Fumes </li>
-              <li>Even Heat Distribution </li>
-              <li>Oven Safe </li>
-              <li>Dishwasher Safe </li>
-              <li>Gas and Induction Compatible </li>
-              <li>Available in 3 and 5 layer Coating</li>
-              <li>Warranty: 1 Year</li>
-            </ul>
-          </div>
-          <div className='right'>
-            <div> <img className='first' src={Rectangle30} alt='' /></div>
-            <div> <img className='second' src={Image8} alt='' /></div>
-          </div>
-        </div>
-        <div className='hbar'>
-          <h6>Retains Nutrients </h6>
-          <img src={Circle} alt='' />
-          <h6>Easy Food Release</h6>
-          <img src={Circle} alt='' />
-          <h6>Easy to Clean</h6>
-          <img src={Circle} alt='' />
-          <h6>Less Oil Cooking</h6>
-          <img src={Circle} alt='' />
-          <h6>Low Gas Consumption</h6>
-          <img src={Circle} alt='' />
-          <h6>20 Years of Excellence</h6>
-        </div>
-      </div>
-
-      )}
-
-
-
-
-
-      <div className="product-listing">
-        <div style={{ height: '170px', backgroundColor: '#EF7C00' }}>
-
-        </div>
-        <h1>Product Listing</h1>
-        <CategoryFilter
-          categories={categories}
-          activeCategory={activeCategory}
-          setActiveCategory={setActiveCategory}
-          counts={counts}
-        />
-        {isMobile ? (<div> </div>) : (<SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />)}
-
-        <div className="product-grid">
-          {filteredProducts.map((product) => (
-            <ProductCard
-              key={product.id}
-              name={product.name}
-              category={product.category}
-              image={product.image}
-              onClick={() => openModal(product.name, product.category)}
+           </div> */}
+           </div>
+           <Footer
+              color="black"
+              insta={insta}
+              facebook={facebook}
+              linkedin={linkedin}
+              color1="white"
+              backgroundColor="#EF7C00"
             />
-          ))}
-        </div>
-
-        {selectedProduct && (
-          <ProductModal
-            showModal={showModal}
-            onClose={closeModal}
-            productName={selectedProduct}
-            carouselImages={CarouselData[selectedCategory][selectedProduct]?.images || []}
-            tableData={CarouselData[selectedCategory][selectedProduct]?.tableData || []}
-            category={selectedCategory}
-
-          />
-        )}
-      </div>
-
-      {isMobile ? (<div style={{ backgroundColor: '#EF7C00' }}>
-        <div className='hline'> </div>
-        <div className='container5'>
-          <h5> DELIVERING A PREMIUM <br />COOKING EXPERIENCE</h5>
-
-          <p>Have any other questions?
-            <br />
-            Feel free to contact us for further support.</p>
-          <button> <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>Contact Us</Link></button>
-
-        </div>
-
-        <div className='hline'> </div>
-
-        <footer className='home-footer'>
-
-          <ul className='first'>
-            <li><Link to='/about' style={{ textDecoration: 'none', color: 'inherit' }}>About </Link></li>
-            <li><Link to='/products' style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}> Products</Link></li>
-            <li><Link to='/' style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>Home </Link></li>
-          </ul>
-          <ul className='second'>
-            <img style={{ cursor: 'pointer' }} src={linkedin} alt='' />
-            <img style={{ cursor: 'pointer' }} src={facebook} alt='' />
-            <img style={{ cursor: 'pointer' }} src={insta} alt='' />
-          </ul>
-        </footer>
-      </div>) : (<div style={{ backgroundColor: '#EF7C00' }}>
-        <div className='products-container5'>
-          <h5 style={{ marginTop: '20px' }}> DELIVERING A PREMIUM COOKING EXPERIENCE</h5>
-          <h1> Request More Information</h1>
-          <p> Have we missed anything? Have any other questions?
-            <br />
-            Feel free to contact us for further support.</p>
-          <button> <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>Contact Us</Link></button>
-          <h7>© 2024 Vardhaman LLC</h7>
-        </div>
-
-        <div className='hline'> </div>
-
-        <footer className='products-footer' style={{ marginBottom: '0px' }}>
-          <div className='logo'> <img src={Logo} alt='' /></div>
-          <ul className='first'>
-            <li > <Link to='/about' style={{ textDecoration: 'none', color: 'inherit' }}>About </Link></li>
-            <li><Link to='/products' style={{ textDecoration: 'none', color: 'inherit' }}> Products</Link></li>
-            <li><Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}>Home </Link></li>
-          </ul>
-          <ul>
-            <img style={{ cursor: 'pointer' }} src={linkedin} alt='' />
-            <img style={{ cursor: 'pointer' }} src={facebook} alt='' />
-            <img style={{ cursor: 'pointer' }} src={insta} alt='' />
-          </ul>
-        </footer>
-      </div>)}
+                    </>
+                    )}
     </div>
   )
 }
