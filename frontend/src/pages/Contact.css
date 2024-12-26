@@ -10,48 +10,55 @@
 }
 
 
-@media (max-width:767px){
+@media (max-width:767px) {
 
-  .contact-cont1{
+  .contact-cont1 {
     display: flex;
     justify-content: center;
     margin: 80px 0 100px 40px;
     /* margin: 100px auto; */
   }
 
-  .contact-cont1 h1{
+  .contact-cont1 h1 {
     text-align: left;
-    font-family: "Promot",sans-serif;
-    font-size: 24px;
+    font-family: "Prompt", sans-serif;
+    font-size: 28px;
     /* font-style: italic; */
-    font-weight: 900;
+    font-weight: 700;
+    color: #3D3D3D;
+    line-height: 1;
+    letter-spacing: 0.5px;
 
   }
 
-  .contact-cont2{
+  .contact-cont2 {
     display: flex;
     background-color: #EF7C00;
-    /* height: 360px; */
+    height: 100%;
+    height: 390px;
     border-top-right-radius: 80px;
     position: relative;
     color: white;
+    font-family: "Prompt", sans-serif;
 
   }
-  .contact-cont2 .l{
+
+  .contact-cont2 .l {
     width: 130px;
   }
 
-  .contact-cont2 .l #first{
-     position: absolute;
-     transform: rotate(-40deg);
-     height: 150px;
-     width: auto;
-     margin-left: -110px;
-     margin-top: -200px;
-     z-index: 1;
+  .contact-cont2 .l #first {
+    position: absolute;
+    transform: rotate(-40deg);
+    height: 150px;
+    width: auto;
+    margin-left: -110px;
+    margin-top: -200px;
+    z-index: 1;
 
   }
-  .contact-cont2 .l #second{
+
+  .contact-cont2 .l #second {
     position: absolute;
     transform: rotate(-5deg);
     height: 90px;
@@ -59,74 +66,80 @@
     margin-left: -63px;
     margin-top: -110px;
     /* z-index: 1; */
- }
+  }
 
 
 
-  .contact-cont2 .r{
-   
+  .contact-cont2 .r {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
     align-items: left;
     margin-left: -80px;
-    margin-top: 80px
+    margin-top: 80px;
   }
 
-  .contact-cont2 h7{
-    font-family: "Promot",sans-serif;
+  .r-cont1 h7 {
+    font-family: "Prompt", sans-serif;
     font-size: 12px;
-    font-weight: 500
-   ;
+    font-weight: 500;
   }
 
-  .contact-cont2 h1{
-    font-family: "Promot",sans-serif;
-    font-size: 22px;
+  .r-cont1 h1 {
+    font-family: "Prompt", sans-serif;
+    font-size: 20px;
     margin: 5px 0;
+    font-weight: 600;
   }
 
-  .contact-cont2 p{
-    font-family: "Promot",sans-serif;
+  .contact-cont2 p {
+    font-family: "Prompt", sans-serif;
     font-size: 14px;
     padding-left: 10px;
   }
 
 
   /* Contact Information Container */
-.contact-info {
-    
-    color: #fff; /* White text color */
+  .contact-info {
+
+    color: #fff;
+    /* White text color */
     padding: 10px 10px 10px 0;
     border-radius: 10px;
     font-family: Arial, sans-serif;
     line-height: 1.8;
   }
-  
+
   /* Individual Contact Items */
   .contact-item {
     margin-bottom: 10px;
     display: flex;
     align-items: top;
   }
-  
+
   /* Labels (Address, Email, etc.) */
   .contact-item .label {
     font-weight: 700;
     font-size: 12px;
-    width: 70px;
-    display: inline-block; 
-}
-.contact-item .value {
-  display: inline-block;
-  color: #fff;
-  vertical-align: top;
-  font-size: 10px;
-  word-break: break-word; /* Ensure long content wraps */
-}
-.contact-item {
-  overflow: hidden; /* Ensures children do not overflow */
-}
+    /* width: 70px; */
+    display: inline-block;
+    width: 25%;
+  }
+
+  .contact-item .value {
+    display: inline-block;
+    color: #fff;
+    vertical-align: top;
+    font-size: 10px;
+    word-break: break-word;
+    width: 75%;
+    /* Ensure long content wraps */
+  }
+
+  .contact-item {
+    overflow: hidden;
+    /* Ensures children do not overflow */
+  }
 
 }
 
